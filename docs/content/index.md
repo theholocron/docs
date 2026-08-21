@@ -1,18 +1,18 @@
 ---
 title: Overview
-description: A modern NodeJS template for monorepos with pre-configured tools, best practices, and CI/CD setup for rapid project development.
+description: Documentation infrastructure for the Holocron ecosystem.
 ---
 
-A pnpm workspace monorepo template for `@theholocron` projects that need multiple packages published in lockstep.
+`theholocron/docs` is the home for shared documentation tooling across all Holocron repos.
 
 ## Structure
 
 ```
 packages/
-  package-a/    Example library package (TypeScript, tsdown, Vitest)
+  registry-doc/    Cross-repo package registry and link utilities
 ```
 
-Add new packages under `packages/` — Turborepo handles build ordering and caching across the workspace.
+Add new packages under `packages/` with the `-doc` suffix — Turborepo handles build ordering and caching across the workspace.
 
 ## What's included
 
@@ -25,18 +25,6 @@ Add new packages under `packages/` — Turborepo handles build ordering and cach
 - **semantic-release** with lockstep versioning — all packages share a single version
 - **Husky + lint-staged** via `@theholocron/lint-staged-config`
 - Full CI/CD via reusable workflows in `theholocron/.github`
-
-## Getting started
-
-Use the [Holocron CLI](https://github.com/theholocron/holocron) to scaffold a new monorepo from this template:
-
-```bash
-npx @theholocron/cli new monorepo my-monorepo \
-  --description "My monorepo description" \
-  --homepage "https://my-monorepo.example.com" \
-  --vault doppler \
-  --agent claude
-```
 
 ## Development
 
@@ -51,6 +39,6 @@ pnpm lint          # ESLint across all packages
 To work on a single package:
 
 ```bash
-pnpm --filter package-a build
-pnpm --filter package-a test
+pnpm --filter registry-doc build
+pnpm --filter registry-doc test
 ```

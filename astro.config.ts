@@ -4,8 +4,8 @@ import { docsTheme } from "@theholocron/docs-theme";
 
 export default defineConfig({
 	docs: {
-		name: "Monorepo Template",
-		github: "monorepo-template",
+		name: "Docs",
+		github: "docs",
 		sidebar: [{ label: "Overview", slug: "" }],
 	},
 	starlight,

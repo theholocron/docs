@@ -1,5 +1,5 @@
 {
-  "display": "Package A",
+  "display": "Registry Doc",
   "extends": "@theholocron/tsconfig/node-lts",
   "compilerOptions": {
     "outDir": "./dist"

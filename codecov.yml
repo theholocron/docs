@@ -6,7 +6,7 @@ coverage:
 
     # Set project-specific coverage targets
     project:
-      package-a:
+      registry-doc:
         target: auto
         threshold: 1%  # PR fails if coverage drops by 1% or more
 
@@ -16,7 +16,7 @@ comment:
 
 component_management:
   individual_components:
-    - component_id: package-a
-      name: "package-a"
+    - component_id: registry-doc
+      name: "registry-doc"
       paths:
-        - packages/package-a/**
+        - packages/registry-doc/**
