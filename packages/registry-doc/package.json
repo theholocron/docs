@@ -1,12 +1,12 @@
 {
-  "name": "@theholocron/package-a",
+  "name": "@theholocron/registry-doc",
   "version": "1.1.2",
-  "description": "Sample package.",
-  "homepage": "https://github.com/theholocron/monorepo-template/tree/main/packages/package-a#readme",
-  "bugs": "https://github.com/theholocron/monorepo-template/issues",
+  "description": "Cross-repo package registry and link utilities for Holocron docs.",
+  "homepage": "https://docs.theholocron.dev/docs/registry-doc",
+  "bugs": "https://github.com/theholocron/docs/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theholocron/monorepo-template.git"
+    "url": "git+https://github.com/theholocron/docs.git"
   },
   "license": "GPL-3.0",
   "author": "Newton Koumantzelis",
@@ -15,7 +15,12 @@
     ".": {
       "import": "./dist/index.mjs",
       "default": "./dist/index.mjs"
-    }
+    },
+    "./validate": {
+      "import": "./dist/validate.mjs",
+      "default": "./dist/validate.mjs"
+    },
+    "./package.json": "./package.json"
   },
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
@@ -52,11 +57,17 @@
         "types": "./dist/index.d.mts",
         "import": "./dist/index.mjs",
         "default": "./dist/index.mjs"
-      }
+      },
+      "./validate": {
+        "types": "./dist/validate.d.mts",
+        "import": "./dist/validate.mjs",
+        "default": "./dist/validate.mjs"
+      },
+      "./package.json": "./package.json"
     },
     "main": "./dist/index.mjs",
     "types": "./dist/index.d.mts"
   },
-  "releases": "https://github.com/theholocron/monorepo-template/releases",
-  "wiki": "https://github.com/theholocron/monorepo-template/wiki"
+  "releases": "https://github.com/theholocron/docs/releases",
+  "wiki": "https://github.com/theholocron/docs/wiki"
 }

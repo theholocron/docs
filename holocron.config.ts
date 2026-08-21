@@ -3,16 +3,15 @@ import { node } from "@theholocron/holocron-config";
 
 const { repo, workflows, providers } = node();
 export default defineConfig({
-	description:
-		"A modern NodeJS template for monorepos with pre-configured tools, best practices, and CI/CD setup for rapid project development.",
-	homepage: "https://docs.theholocron.dev/monorepo-template/",
+	description: "Documentation infrastructure for the Holocron ecosystem.",
+	homepage: "https://docs.theholocron.dev/docs/",
 	repo: {
-		name: "theholocron/monorepo-template",
+		name: "theholocron/docs",
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
-		topics: ["monorepo", "pnpm", "template", "typescript"],
+		topics: ["astro", "documentation", "registry", "starlight", "typescript"],
 		...repo,
 		protection: "strict",
-		requiredChecks: ["audit / Knip", "audit / Audit the bundle size", "codecov/patch", "codecov/project/package-a"],
+		requiredChecks: ["audit / Knip", "audit / Audit the bundle size", "codecov/patch", "codecov/patch/registry-doc", "codecov/project"],
 		properties: {
 			...repo.properties,
 			runtime_environment: "node",
