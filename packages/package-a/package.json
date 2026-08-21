@@ -1,0 +1,62 @@
+{
+  "name": "@theholocron/package-a",
+  "version": "1.1.2",
+  "description": "Sample package.",
+  "homepage": "https://github.com/theholocron/monorepo-template/tree/main/packages/package-a#readme",
+  "bugs": "https://github.com/theholocron/monorepo-template/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theholocron/monorepo-template.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Newton Koumantzelis",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@codecov/rollup-plugin": "^2.0.1",
+    "@theholocron/eslint-config": "catalog:configs",
+    "@theholocron/prettier-config": "catalog:configs",
+    "@theholocron/tsconfig": "catalog:configs",
+    "@theholocron/tsdown-config": "catalog:configs",
+    "@theholocron/vitest-config": "catalog:configs",
+    "@vitest/coverage-v8": "catalog:",
+    "prettier": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "import": "./dist/index.mjs",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "main": "./dist/index.mjs",
+    "types": "./dist/index.d.mts"
+  },
+  "releases": "https://github.com/theholocron/monorepo-template/releases",
+  "wiki": "https://github.com/theholocron/monorepo-template/wiki"
+}

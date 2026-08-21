@@ -1,0 +1,22 @@
+coverage:
+  status:
+    # Apply default rules for flags coverage not uploaded
+    default_rules:
+      flag_coverage_not_uploaded_behavior: exclude
+
+    # Set project-specific coverage targets
+    project:
+      package-a:
+        target: auto
+        threshold: 1%  # PR fails if coverage drops by 1% or more
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+
+component_management:
+  individual_components:
+    - component_id: package-a
+      name: "package-a"
+      paths:
+        - packages/package-a/**

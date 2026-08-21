@@ -1,0 +1,49 @@
+packages:
+  - "docs"
+  - "packages/*"
+
+# Shared dep versions for this repo.
+catalog:
+  '@astrojs/starlight': ^0.41.5
+  '@commitlint/cli': ^21.2.2
+  '@eslint/js': ^10.0.0
+  '@semantic-release/changelog': ^7.0.0
+  '@semantic-release/exec': ^7.1.0
+  '@semantic-release/git': ^11.0.1
+  '@semantic-release/github': ^12.0.9
+  '@theholocron/docs-theme': ^1.3.5
+  '@vitest/coverage-v8': ^4.1.10
+  astro: ^7.2.2
+  conventional-changelog-conventionalcommits: ^10.3.0
+  eslint: ^10.8.1
+  eslint-plugin-n: ^18.2.2
+  eslint-plugin-simple-import-sort: ^14.0.0
+  globals: ^17.11.0
+  husky: ^9.1.7
+  knip: ^6.32.2
+  lint-staged: ^17.3.0
+  prettier: ^3.6.2
+  semantic-release: ^25.0.8
+  sort-package-json: ^4.0.0
+  tsdown: ^0.22.14
+  typescript: ^5.9.3
+  typescript-eslint: ^8.67.0
+  vitest: ^4.1.10
+
+# Shared configs — release in lockstep; bump all entries together.
+catalogs:
+  configs:
+    '@theholocron/astro-config': ^7.22.2
+    '@theholocron/commitlint-config': ^7.19.1
+    '@theholocron/eslint-config': ^7.19.1
+    '@theholocron/holocron-config': ^7.19.1
+    '@theholocron/lint-staged-config': ^7.19.1
+    '@theholocron/prettier-config': ^7.19.1
+    '@theholocron/semantic-release-config': ^7.19.1
+    '@theholocron/tsconfig': ^7.19.1
+    '@theholocron/tsdown-config': ^7.19.1
+    '@theholocron/vitest-config': ^7.19.1
+
+  holocron:
+    '@theholocron/cli': ^3.29.7
+    '@theholocron/holocron-plugin-github': ^3.24.4
