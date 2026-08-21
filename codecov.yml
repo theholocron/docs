@@ -1,20 +1,31 @@
-coverage:
-  status:
-    # Apply default rules for flags coverage not uploaded
-    default_rules:
-      flag_coverage_not_uploaded_behavior: exclude
+codecov:
+  require_ci_to_pass: true
+  max_report_age: off
 
-    # Set project-specific coverage targets
+coverage:
+  precision: 2
+  round: down
+  range: "50...100"
+  status:
     project:
-      registry-doc:
+      default:
         target: auto
-        threshold: 1%  # PR fails if coverage drops by 1% or more
+        threshold: 1%
+    patch:
+      default:
+        target: auto
+        threshold: 1%
 
 comment:
-  layout: "reach, diff, flags, files"
+  layout: "reach,diff,flags,components"
   behavior: default
+  require_changes: true
 
 component_management:
+  default_rules:
+    statuses:
+      - type: patch
+        target: auto
   individual_components:
     - component_id: registry-doc
       name: "registry-doc"
