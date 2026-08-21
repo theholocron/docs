@@ -41,6 +41,7 @@
     "@theholocron/tsconfig": "catalog:configs",
     "@theholocron/tsdown-config": "catalog:configs",
     "@theholocron/vitest-config": "catalog:configs",
+    "@types/node": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "prettier": "catalog:",
     "tsdown": "catalog:",
