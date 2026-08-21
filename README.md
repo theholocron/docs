@@ -2,7 +2,7 @@
 
 <!-- holocron:description -->
 
-Documentation infrastructure for the Holocron ecosystem.
+Documentation infrastructure.
 
 <!-- /holocron:description -->
 
@@ -20,8 +20,8 @@ pnpm lint          # lint all packages
 
 ## Packages
 
-| Package | Description |
-| ------- | ----------- |
+| Package                                                | Description                                    |
+| ------------------------------------------------------ | ---------------------------------------------- |
 | [`@theholocron/registry-doc`](./packages/registry-doc) | Cross-repo package registry and link utilities |
 
 ## Releases

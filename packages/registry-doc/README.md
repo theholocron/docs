@@ -1,6 +1,6 @@
 # `@theholocron/registry-doc`
 
-Cross-repo package registry and link utilities for Holocron docs.
+Cross-repo package registry and link utilities for docs.
 
 ## Installation
 
@@ -23,8 +23,8 @@ const client = getPackage("sentry-client");
 
 // Org-level constants
 import { getOrg, getScope, getDocsBaseUrl } from "@theholocron/registry-doc";
-getOrg();        // "theholocron"
-getScope();      // "@theholocron"
+getOrg(); // "theholocron"
+getScope(); // "@theholocron"
 getDocsBaseUrl(); // "https://docs.theholocron.dev"
 ```
 

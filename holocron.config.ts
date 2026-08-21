@@ -3,7 +3,7 @@ import { node } from "@theholocron/holocron-config";
 
 const { repo, workflows, providers } = node();
 export default defineConfig({
-	description: "Documentation infrastructure for the Holocron ecosystem.",
+	description: "Documentation infrastructure.",
 	homepage: "https://docs.theholocron.dev/docs/",
 	repo: {
 		name: "theholocron/docs",
@@ -11,7 +11,13 @@ export default defineConfig({
 		topics: ["astro", "documentation", "registry", "starlight", "typescript"],
 		...repo,
 		protection: "strict",
-		requiredChecks: ["audit / Knip", "audit / Audit the bundle size", "codecov/patch", "codecov/patch/registry-doc", "codecov/project"],
+		requiredChecks: [
+			"audit / Knip",
+			"audit / Audit the bundle size",
+			"codecov/patch",
+			"codecov/patch/registry-doc",
+			"codecov/project",
+		],
 		properties: {
 			...repo.properties,
 			runtime_environment: "node",

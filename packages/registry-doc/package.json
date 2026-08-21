@@ -1,7 +1,7 @@
 {
   "name": "@theholocron/registry-doc",
   "version": "1.1.2",
-  "description": "Cross-repo package registry and link utilities for Holocron docs.",
+  "description": "Cross-repo package registry and link utilities for docs.",
   "homepage": "https://docs.theholocron.dev/docs/registry-doc",
   "bugs": "https://github.com/theholocron/docs/issues",
   "repository": {
