@@ -21,10 +21,7 @@ const mockRegistry = {
 
 describe("validateRegistry", () => {
 	it("returns valid when registry and workspace match", () => {
-		const result = validateRegistry(mockRegistry, [
-			"@theholocron/github-client",
-			"@theholocron/sentry-client",
-		]);
+		const result = validateRegistry(mockRegistry, ["@theholocron/github-client", "@theholocron/sentry-client"]);
 		expect(result.valid).toBe(true);
 		expect(result.missing).toHaveLength(0);
 		expect(result.extra).toHaveLength(0);

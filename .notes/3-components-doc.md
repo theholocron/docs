@@ -14,6 +14,7 @@ different heading, sandbox embed) require editing 30+ pages by hand. Some get
 missed.
 
 The unique content per page is small:
+
 - Usage / code examples
 - Config options (plugins only)
 - Auth steps (plugins only — partially templatable)
@@ -27,8 +28,7 @@ Everything else is derivable from `registry-doc` data.
 All are Astro components, exported from a single subpath:
 
 ```ts
-import { PackageHeader, Installation, PluginHeader,
-         CapabilitiesTable, PackageGrid } from "@theholocron/components-doc";
+import { PackageHeader, Installation, PluginHeader, CapabilitiesTable, PackageGrid } from "@theholocron/components-doc";
 ```
 
 ---
@@ -37,11 +37,12 @@ import { PackageHeader, Installation, PluginHeader,
 
 ```ts
 interface PackageHeaderProps {
-  entry: LinkEntry;   // from getClients()[slug]
+  entry: LinkEntry; // from getClients()[slug]
 }
 ```
 
 Renders:
+
 - Package name as inline code
 - One-line description
 - npm badge → `entry.npmUrl`
@@ -54,8 +55,8 @@ Renders:
 
 ```ts
 interface PluginHeaderProps {
-  entry: LinkEntry;       // from getPlugins()[slug]
-  capability: string;     // "observability"
+  entry: LinkEntry; // from getPlugins()[slug]
+  capability: string; // "observability"
 }
 ```
 
@@ -67,8 +68,8 @@ Same as `<PackageHeader>` but adds a capability label/badge.
 
 ```ts
 interface InstallationProps {
-  package: string;    // "@theholocron/github-client"
-  dev?: boolean;      // default false; plugins use true
+  package: string; // "@theholocron/github-client"
+  dev?: boolean; // default false; plugins use true
 }
 ```
 
@@ -80,8 +81,8 @@ Renders a `## Install` heading + `pnpm add [-D] {package}` code block.
 
 ```ts
 interface CapabilitiesRow {
-  capability: string;   // "observability"
-  token: string;        // "HOLOCRON_SENTRY_TOKEN (sentry)"
+  capability: string; // "observability"
+  token: string; // "HOLOCRON_SENTRY_TOKEN (sentry)"
 }
 interface CapabilitiesTableProps {
   rows: CapabilitiesRow[];
@@ -97,8 +98,8 @@ hand-maintained table currently in every plugin page.
 
 ```ts
 interface PackageGridProps {
-  packages: LinksRegistry;          // full registry or subset
-  type?: "clients" | "plugins";     // controls column labels; default "clients"
+  packages: LinksRegistry; // full registry or subset
+  type?: "clients" | "plugins"; // controls column labels; default "clients"
 }
 ```
 
@@ -118,6 +119,7 @@ This is what makes `index.mdx` fully component-driven with no hardcoded content
 title: GitHub Client
 description: TypeScript client for the GitHub REST API.
 ---
+
 import { PackageHeader, Installation } from "@theholocron/components-doc";
 import { getClients } from "@theholocron/registry-doc";
 export const entry = getClients()["github-client"];
@@ -143,6 +145,7 @@ See [API Reference](/github/api) for all namespaces and methods.
 title: Sentry Plugin
 description: Implements the observability capability against Sentry's management API.
 ---
+
 import { PluginHeader, Installation, CapabilitiesTable } from "@theholocron/components-doc";
 import { getClients, getPlugins } from "@theholocron/registry-doc";
 export const plugin = getPlugins()["holocron-plugin-sentry"];
@@ -200,11 +203,11 @@ to `registry-doc` as sandboxes become available.
 
 ## Tickets
 
-| # | Repo | PR title | Notes |
-|---|---|---|---|
-| 3.1 | `docs` | `feat(components-doc): scaffold package` | Package setup, build config, exports path |
-| 3.2 | `docs` | `feat(components-doc): add Installation + PackageHeader` | Simplest first; validates the export path |
-| 3.3 | `docs` | `feat(components-doc): add PluginHeader + CapabilitiesTable` | Plugin variants |
-| 3.4 | `docs` | `feat(components-doc): add PackageGrid` | Index/overview component |
+| #   | Repo   | PR title                                                     | Notes                                     |
+| --- | ------ | ------------------------------------------------------------ | ----------------------------------------- |
+| 3.1 | `docs` | `feat(components-doc): scaffold package`                     | Package setup, build config, exports path |
+| 3.2 | `docs` | `feat(components-doc): add Installation + PackageHeader`     | Simplest first; validates the export path |
+| 3.3 | `docs` | `feat(components-doc): add PluginHeader + CapabilitiesTable` | Plugin variants                           |
+| 3.4 | `docs` | `feat(components-doc): add PackageGrid`                      | Index/overview component                  |
 
 After 3.1–3.4 publish, per-repo adoption happens in Note 2 tickets (2.4–2.7).

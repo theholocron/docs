@@ -6,10 +6,7 @@ export interface ValidationResult {
 	extra: string[];
 }
 
-export function validateRegistry(
-	registry: LinksRegistry,
-	workspacePackages: string[],
-): ValidationResult {
+export function validateRegistry(registry: LinksRegistry, workspacePackages: string[]): ValidationResult {
 	const registered = new Set(Object.values(registry).map((e) => e.package));
 	const workspace = new Set(workspacePackages);
 	const missing = workspacePackages.filter((p) => !registered.has(p));

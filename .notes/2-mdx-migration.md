@@ -93,14 +93,14 @@ consuming repos. This lives in `@theholocron/eslint-config` as an opt-in preset
 
 ## Tickets
 
-| # | Repo | PR title | Notes |
-|---|---|---|---|
-| 2.1 | `themes` | `feat(docs-theme): verify MDX + add tsconfig path alias` | Test `.mdx` works; add `~` alias |
-| 2.2 | `themes` | `feat(docs-theme): integrate starlight-typedoc` | Plugin config + sidebar wiring |
-| 2.3 | `configs` | `feat(eslint-config): add /jsdoc preset` | `eslint-plugin-jsdoc` rules for exported functions |
-| 2.4 | `clients` | `refactor(docs): convert to MDX + adopt components` | All pages; combined with Note 3 adoption |
-| 2.5 | `holocron` | `refactor(docs): convert to MDX + adopt components` | Plugin pages; combined with Note 3 adoption |
-| 2.6 | `utils` | `refactor(docs): convert to MDX + adopt components` | Same pattern |
-| 2.7 | `skills` | `refactor(docs): convert to MDX + adopt components` | Same pattern |
+| #   | Repo       | PR title                                                 | Notes                                              |
+| --- | ---------- | -------------------------------------------------------- | -------------------------------------------------- |
+| 2.1 | `themes`   | `feat(docs-theme): verify MDX + add tsconfig path alias` | Test `.mdx` works; add `~` alias                   |
+| 2.2 | `themes`   | `feat(docs-theme): integrate starlight-typedoc`          | Plugin config + sidebar wiring                     |
+| 2.3 | `configs`  | `feat(eslint-config): add /jsdoc preset`                 | `eslint-plugin-jsdoc` rules for exported functions |
+| 2.4 | `clients`  | `refactor(docs): convert to MDX + adopt components`      | All pages; combined with Note 3 adoption           |
+| 2.5 | `holocron` | `refactor(docs): convert to MDX + adopt components`      | Plugin pages; combined with Note 3 adoption        |
+| 2.6 | `utils`    | `refactor(docs): convert to MDX + adopt components`      | Same pattern                                       |
+| 2.7 | `skills`   | `refactor(docs): convert to MDX + adopt components`      | Same pattern                                       |
 
 2.1 + 2.3 must publish before 2.4–2.7. Open 2.4–2.7 as a batch and merge together.

@@ -7,8 +7,8 @@ description: Documentation infrastructure for the Holocron ecosystem.
 
 ## Packages
 
-| Package | Description |
-| ------- | ----------- |
+| Package                                      | Description                                    |
+| -------------------------------------------- | ---------------------------------------------- |
 | [`@theholocron/registry-doc`](/registry-doc) | Cross-repo package registry and link utilities |
 
 ## How it fits together

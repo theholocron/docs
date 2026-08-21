@@ -36,6 +36,7 @@ both in sync.
 title: Overview
 description: API clients and shared HTTP primitives.
 ---
+
 import { PackageGrid } from "@theholocron/components-doc";
 import { getClients } from "@theholocron/registry-doc";
 
@@ -49,6 +50,7 @@ import { getClients } from "@theholocron/registry-doc";
 title: Plugins
 description: First-party plugins for the Holocron CLI.
 ---
+
 import { PackageGrid } from "@theholocron/components-doc";
 import { getPlugins } from "@theholocron/registry-doc";
 
@@ -101,12 +103,12 @@ Adding a new client package:
 
 ## Tickets
 
-| # | Repo | PR title | Notes |
-|---|---|---|---|
-| 4.1 | `clients` | `refactor(docs): replace index.md with component-driven index.mdx` | First consumer; validates pattern; can combine with Note 2 ticket 2.4 |
-| 4.2 | `holocron` | `refactor(docs): replace plugin overview with component-driven index.mdx` | Can combine with 2.5 |
-| 4.3 | `holocron` | `feat(sync-readme): update docs/index.mdx frontmatter description` | CLI change; small, targeted YAML update |
-| 4.4 | `utils` | `refactor(docs): replace index.md with component-driven index.mdx` | Same pattern |
+| #   | Repo       | PR title                                                                  | Notes                                                                 |
+| --- | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 4.1 | `clients`  | `refactor(docs): replace index.md with component-driven index.mdx`        | First consumer; validates pattern; can combine with Note 2 ticket 2.4 |
+| 4.2 | `holocron` | `refactor(docs): replace plugin overview with component-driven index.mdx` | Can combine with 2.5                                                  |
+| 4.3 | `holocron` | `feat(sync-readme): update docs/index.mdx frontmatter description`        | CLI change; small, targeted YAML update                               |
+| 4.4 | `utils`    | `refactor(docs): replace index.md with component-driven index.mdx`        | Same pattern                                                          |
 
 4.1 + 4.2 can be rolled into the Note 2 migration PRs (2.4 + 2.5) to avoid
 extra PRs per repo.

@@ -20,13 +20,14 @@ here are consumed by all other `theholocron` repos to build their docs sites.
 
 ## Packages
 
-| Package                          | Description                                        |
-| -------------------------------- | -------------------------------------------------- |
-| `@theholocron/registry-doc`      | Cross-repo package registry and link utilities     |
+| Package                     | Description                                    |
+| --------------------------- | ---------------------------------------------- |
+| `@theholocron/registry-doc` | Cross-repo package registry and link utilities |
 
 ## Adding a new package
 
 Use the `-doc` suffix (singular). When adding a new package:
+
 1. Scaffold under `packages/<name>-doc/`
 2. Add to `codecov.yml` under `component_management.individual_components`
 3. Add `codecov/patch/<name>-doc` to `requiredChecks` in `holocron.config.ts`

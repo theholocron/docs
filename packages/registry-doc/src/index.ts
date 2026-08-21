@@ -13,8 +13,7 @@ export const getOrg = (): string => "theholocron";
 
 export const getScope = (): string => "@theholocron";
 
-export const getDocsBaseUrl = (): string =>
-	process.env["DOCS_BASE_URL"] ?? "https://docs.theholocron.dev";
+export const getDocsBaseUrl = (): string => process.env["DOCS_BASE_URL"] ?? "https://docs.theholocron.dev";
 
 export const getGitHubBaseUrl = (): string => "https://github.com/theholocron";
 

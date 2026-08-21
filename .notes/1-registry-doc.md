@@ -27,6 +27,7 @@ this explicit and gives the docs infrastructure its own lifecycle.
 **Functions, not exported constants.**
 Internal constants (`ORG`, `SCOPE`, `DOCS_BASE`, etc.) are never exported
 directly. Every public value goes through a function. This allows:
+
 - `DOCS_BASE` to read `process.env.DOCS_BASE_URL` for staging/preview builds
 - Easy mocking in tests
 - Adding parameters later without a breaking change
@@ -111,21 +112,21 @@ function c(slug: string, docsPath: string, sandboxUrl?: string): LinkEntry {
 }
 
 export const clients = {
-  "clerk-client":      c("clerk-client",      "clerk"),
+  "clerk-client": c("clerk-client", "clerk"),
   "cloudflare-client": c("cloudflare-client", "cloudflare"),
   "confluence-client": c("confluence-client", "confluence"),
-  "doppler-client":    c("doppler-client",    "doppler"),
-  "github-client":     c("github-client",     "github"),
-  "google-client":     c("google-client",     "google"),
-  "http-client":       c("http-client",       "http"),
-  "infisical-client":  c("infisical-client",  "infisical"),
-  "jira-client":       c("jira-client",       "jira"),
-  "neon-client":       c("neon-client",       "neon"),
-  "posthog-client":    c("posthog-client",    "posthog"),
-  "postman-client":    c("postman-client",    "postman"),
-  "sentry-client":     c("sentry-client",     "sentry"),
-  "vercel-client":     c("vercel-client",     "vercel"),
-  "zendesk-client":    c("zendesk-client",    "zendesk"),
+  "doppler-client": c("doppler-client", "doppler"),
+  "github-client": c("github-client", "github"),
+  "google-client": c("google-client", "google"),
+  "http-client": c("http-client", "http"),
+  "infisical-client": c("infisical-client", "infisical"),
+  "jira-client": c("jira-client", "jira"),
+  "neon-client": c("neon-client", "neon"),
+  "posthog-client": c("posthog-client", "posthog"),
+  "postman-client": c("postman-client", "postman"),
+  "sentry-client": c("sentry-client", "sentry"),
+  "vercel-client": c("vercel-client", "vercel"),
+  "zendesk-client": c("zendesk-client", "zendesk"),
 } as const satisfies LinksRegistry;
 ```
 
@@ -135,19 +136,19 @@ export const clients = {
 // base: `${DOCS_BASE}/holocron/plugins`, github: `${GITHUB_BASE}/holocron`
 // Entry helper: p(slug, docsPath)
 export const plugins = {
-  "holocron-plugin-1password":  p("holocron-plugin-1password",  "1password"),
-  "holocron-plugin-clerk":      p("holocron-plugin-clerk",      "clerk"),
+  "holocron-plugin-1password": p("holocron-plugin-1password", "1password"),
+  "holocron-plugin-clerk": p("holocron-plugin-clerk", "clerk"),
   "holocron-plugin-cloudflare": p("holocron-plugin-cloudflare", "cloudflare"),
-  "holocron-plugin-discord":    p("holocron-plugin-discord",    "discord"),
-  "holocron-plugin-doppler":    p("holocron-plugin-doppler",    "doppler"),
-  "holocron-plugin-github":     p("holocron-plugin-github",     "github"),
-  "holocron-plugin-infisical":  p("holocron-plugin-infisical",  "infisical"),
-  "holocron-plugin-neon":       p("holocron-plugin-neon",       "neon"),
-  "holocron-plugin-posthog":    p("holocron-plugin-posthog",    "posthog"),
-  "holocron-plugin-postman":    p("holocron-plugin-postman",    "postman"),
-  "holocron-plugin-sentry":     p("holocron-plugin-sentry",     "sentry"),
-  "holocron-plugin-slack":      p("holocron-plugin-slack",      "slack"),
-  "holocron-plugin-vercel":     p("holocron-plugin-vercel",     "vercel"),
+  "holocron-plugin-discord": p("holocron-plugin-discord", "discord"),
+  "holocron-plugin-doppler": p("holocron-plugin-doppler", "doppler"),
+  "holocron-plugin-github": p("holocron-plugin-github", "github"),
+  "holocron-plugin-infisical": p("holocron-plugin-infisical", "infisical"),
+  "holocron-plugin-neon": p("holocron-plugin-neon", "neon"),
+  "holocron-plugin-posthog": p("holocron-plugin-posthog", "posthog"),
+  "holocron-plugin-postman": p("holocron-plugin-postman", "postman"),
+  "holocron-plugin-sentry": p("holocron-plugin-sentry", "sentry"),
+  "holocron-plugin-slack": p("holocron-plugin-slack", "slack"),
+  "holocron-plugin-vercel": p("holocron-plugin-vercel", "vercel"),
 } as const satisfies LinksRegistry;
 ```
 
@@ -181,14 +182,11 @@ import type { LinksRegistry } from "./types.js";
 
 export interface ValidationResult {
   valid: boolean;
-  missing: string[];  // in workspace, absent from registry
-  extra: string[];    // in registry, absent from workspace
+  missing: string[]; // in workspace, absent from registry
+  extra: string[]; // in registry, absent from workspace
 }
 
-export function validateRegistry(
-  registry: LinksRegistry,
-  workspacePackages: string[],
-): ValidationResult {
+export function validateRegistry(registry: LinksRegistry, workspacePackages: string[]): ValidationResult {
   const registered = new Set(Object.values(registry).map((e) => e.package));
   const workspace = new Set(workspacePackages);
   const missing = workspacePackages.filter((p) => !registered.has(p));
@@ -270,7 +268,9 @@ for await (const path of glob("packages/*/package.json")) {
 
 // clients repo validates against getClients(); holocron against getPlugins()
 const result = validateRegistry(getClients(), names);
-if (!result.valid) { /* print diff, process.exit(1) */ }
+if (!result.valid) {
+  /* print diff, process.exit(1) */
+}
 ```
 
 Runs as `tsx scripts/validate-registry.ts` in the `audit` CI job.
@@ -278,6 +278,7 @@ Runs as `tsx scripts/validate-registry.ts` in the `audit` CI job.
 ### 3. CLAUDE.md / AGENTS.md
 
 Add to every repo's agent instructions:
+
 > When adding a new client or plugin package, open a follow-up PR in
 > `theholocron/docs` to add the entry to `packages/registry-doc/src/`.
 
@@ -290,16 +291,16 @@ PR as a named step in the new-package checklist.
 
 ## Tickets
 
-| # | Repo | PR title |
-|---|---|---|
-| 1.1 | `docs` | `feat: bootstrap theholocron/docs from monorepo-template` |
-| 1.2 | `docs` | `feat(registry-doc): scaffold package with types + empty registries` |
-| 1.3 | `docs` | `feat(registry-doc): add clients registry` |
-| 1.4 | `docs` | `feat(registry-doc): add plugins registry` |
-| 1.5 | `docs` | `feat(registry-doc): add validateRegistry utility` |
-| 1.6 | `clients` | `feat: add validate-registry script + audit CI step` |
-| 1.7 | `holocron` | `feat: add validate-registry script + audit CI step` |
-| 1.8 | `clients` | `chore(docs): update AGENTS.md — add registry-doc step to new-package checklist` |
-| 1.9 | `.github-private` | `docs: update AGENTS.md pre-task rules (fresh branch, docs required)` |
+| #   | Repo              | PR title                                                                         |
+| --- | ----------------- | -------------------------------------------------------------------------------- |
+| 1.1 | `docs`            | `feat: bootstrap theholocron/docs from monorepo-template`                        |
+| 1.2 | `docs`            | `feat(registry-doc): scaffold package with types + empty registries`             |
+| 1.3 | `docs`            | `feat(registry-doc): add clients registry`                                       |
+| 1.4 | `docs`            | `feat(registry-doc): add plugins registry`                                       |
+| 1.5 | `docs`            | `feat(registry-doc): add validateRegistry utility`                               |
+| 1.6 | `clients`         | `feat: add validate-registry script + audit CI step`                             |
+| 1.7 | `holocron`        | `feat: add validate-registry script + audit CI step`                             |
+| 1.8 | `clients`         | `chore(docs): update AGENTS.md — add registry-doc step to new-package checklist` |
+| 1.9 | `.github-private` | `docs: update AGENTS.md pre-task rules (fresh branch, docs required)`            |
 
 1.1 → 1.2 → 1.3 + 1.4 (parallel) → 1.5 → 1.6 + 1.7 (parallel) → 1.8 + 1.9.
