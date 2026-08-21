@@ -73,6 +73,6 @@
       "@commitlint/config-conventional>conventional-changelog-conventionalcommits": "7"
     }
   },
-  "releases": "https://github.com/theholocron/monorepo-template/releases",
-  "wiki": "https://github.com/theholocron/monorepo-template/wiki"
+  "releases": "https://github.com/theholocron/docs/releases",
+  "wiki": "https://github.com/theholocron/docs/wiki"
 }

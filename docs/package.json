@@ -1,5 +1,5 @@
 {
-  "name": "@theholocron/monorepo-template-site",
+  "name": "@theholocron/docs-site",
   "version": "0.0.0",
   "private": true,
   "scripts": {
