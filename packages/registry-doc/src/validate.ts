@@ -1,4 +1,4 @@
-import type { LinksRegistry } from "./index.js";
+import type { LinksRegistry } from "./types.js";
 
 export interface ValidationResult {
 	valid: boolean;

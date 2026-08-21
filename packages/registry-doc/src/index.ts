@@ -1,27 +1,21 @@
-export type LinkEntry = {
-	slug: string;
-	package: string;
-	docsUrl: string;
-	npmUrl: string;
-	githubUrl: string;
-	sandboxUrl?: string;
-};
+import { clients } from "./clients.js";
+import { DOCS_BASE, GITHUB_BASE, ORG, SCOPE } from "./constants.js";
+import { plugins } from "./plugins.js";
 
-export type LinksRegistry = Record<string, LinkEntry>;
+export type { LinkEntry, LinksRegistry } from "./types.js";
 
-export const getOrg = (): string => "theholocron";
+export const getOrg = (): string => ORG;
 
-export const getScope = (): string => "@theholocron";
+export const getScope = (): string => SCOPE;
 
-export const getDocsBaseUrl = (): string => process.env["DOCS_BASE_URL"] ?? "https://docs.theholocron.dev";
+export const getDocsBaseUrl = (): string => DOCS_BASE;
 
-export const getGitHubBaseUrl = (): string => "https://github.com/theholocron";
+export const getGitHubBaseUrl = (): string => GITHUB_BASE;
 
-// Full registry — populated in follow-up PRs
-export const getRegistry = (): LinksRegistry => ({ ...getClients(), ...getPlugins() });
+export const getClients = () => clients;
 
-export const getClients = (): LinksRegistry => ({});
+export const getPlugins = () => plugins;
 
-export const getPlugins = (): LinksRegistry => ({});
+export const getRegistry = () => ({ ...clients, ...plugins });
 
-export const getPackage = (_slug: string): LinkEntry | undefined => undefined;
+export const getPackage = (slug: string) => getRegistry()[slug];
