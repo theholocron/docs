@@ -117,11 +117,11 @@ catalogs:
       version: 4.1.10
   holocron:
     '@theholocron/cli':
-      specifier: ^3.29.7
-      version: 3.29.8
+      specifier: ^3.29.12
+      version: 3.29.12
     '@theholocron/holocron-plugin-github':
-      specifier: ^3.29.2
-      version: 3.29.11
+      specifier: ^3.29.12
+      version: 3.29.12
 
 overrides:
   '@commitlint/config-conventional>conventional-changelog-conventionalcommits': '7'
@@ -156,7 +156,7 @@ importers:
         version: 7.22.2(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
       '@theholocron/cli':
         specifier: catalog:holocron
-        version: 3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
+        version: 3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
       '@theholocron/commitlint-config':
         specifier: catalog:configs
         version: 7.22.2(@commitlint/cli@21.2.2(@types/node@26.2.0)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.2)
@@ -168,10 +168,10 @@ importers:
         version: 7.19.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/holocron-config':
         specifier: catalog:configs
-        version: 7.22.2(@theholocron/cli@3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))
+        version: 7.22.2(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))
       '@theholocron/holocron-plugin-github':
         specifier: catalog:holocron
-        version: 3.29.11(@theholocron/cli@3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))(@theholocron/github-client@1.10.3(vitest@4.1.10))
+        version: 3.29.12(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))(@theholocron/github-client@1.10.3(vitest@4.1.10))
       '@theholocron/lint-staged-config':
         specifier: catalog:configs
         version: 7.22.2(husky@9.1.7)(lint-staged@17.3.0)(sort-package-json@4.0.0)
@@ -2076,8 +2076,8 @@ packages:
     peerDependencies:
       astro: '>=5.0.0'
 
-  '@theholocron/cli@3.29.8':
-    resolution: {integrity: sha512-ofxwFqYx1fW5ylFRpPrHxRdv6ojf5gzj/NjsyGSGkfA8L+frXLBbGnUI1J6ThA5ZdFCRIHepceBX1uYgidXxEg==}
+  '@theholocron/cli@3.29.12':
+    resolution: {integrity: sha512-znpLNLOrfViyZNcxhr8tbo82kUXYDlOoG0GgLJezmFzcw88NA8fotNjVTydSyZhG0z8roShGHFmc3EPBdC1D8A==}
     hasBin: true
 
   '@theholocron/commitlint-config@7.22.2':
@@ -2133,10 +2133,10 @@ packages:
     peerDependencies:
       '@theholocron/cli': '>=2.0.0-alpha.1'
 
-  '@theholocron/holocron-plugin-github@3.29.11':
-    resolution: {integrity: sha512-U+uaAt2QBIOW7z+FXtYadpYmZXXQYW24khOck0gaeoXpjQioR6wl4kJVmQFKR3LHeuuCjgxVzqQuzFkrkdBx/A==}
+  '@theholocron/holocron-plugin-github@3.29.12':
+    resolution: {integrity: sha512-6Yy3KXLBbbpzBaIQCXHjjTMbKAImixvRT4HNv+Jm5MvobVqx9ejq1TEpZrUkT+TiOCMLuvdmSgkwJehmpZxhBw==}
     peerDependencies:
-      '@theholocron/cli': 3.29.11
+      '@theholocron/cli': 3.29.12
       '@theholocron/github-client': ^1.9.0
 
   '@theholocron/http-client@1.10.3':
@@ -8100,7 +8100,7 @@ snapshots:
     dependencies:
       astro: 7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
 
-  '@theholocron/cli@3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)':
+  '@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)':
     dependencies:
       '@inquirer/prompts': 8.5.2(@types/node@26.2.0)
       '@napi-rs/keyring': 1.3.0
@@ -8146,13 +8146,13 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@theholocron/holocron-config@7.22.2(@theholocron/cli@3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))':
+  '@theholocron/holocron-config@7.22.2(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))':
     dependencies:
-      '@theholocron/cli': 3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
+      '@theholocron/cli': 3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
 
-  '@theholocron/holocron-plugin-github@3.29.11(@theholocron/cli@3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))(@theholocron/github-client@1.10.3(vitest@4.1.10))':
+  '@theholocron/holocron-plugin-github@3.29.12(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))(@theholocron/github-client@1.10.3(vitest@4.1.10))':
     dependencies:
-      '@theholocron/cli': 3.29.8(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
+      '@theholocron/cli': 3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
       '@theholocron/github-client': 1.10.3(vitest@4.1.10)
       libsodium-wrappers: 0.8.4
 
