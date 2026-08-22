@@ -37,7 +37,10 @@ const config: KnipConfig = {
 		"alex",
 		"prettier",
 		"sort-package-json",
-		// peer dep of components-doc; required by astro check but not statically imported
+		// peer deps of components-doc; required by Astro at runtime but never statically imported
+		// @astrojs/react — powers client:only="react" in sandbox.astro
+		// @astrojs/starlight — required by astro check for type resolution
+		"@astrojs/react",
 		"@astrojs/starlight",
 	],
 	ignoreExportsUsedInFile: true,
