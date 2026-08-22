@@ -3,7 +3,7 @@ import type { LinkEntry, LinksRegistry } from "./types.js";
 
 const github = `${GITHUB_BASE}/clients`;
 
-function c(slug: string, docsPath: string, sandboxUrl?: string): LinkEntry {
+function makeClientEntry(slug: string, docsPath: string, sandboxUrl?: string): LinkEntry {
 	const pkg = `${SCOPE}/${slug}`;
 	return {
 		slug,
@@ -16,19 +16,19 @@ function c(slug: string, docsPath: string, sandboxUrl?: string): LinkEntry {
 }
 
 export const clients: LinksRegistry = {
-	"clerk-client": c("clerk-client", "clerk"),
-	"cloudflare-client": c("cloudflare-client", "cloudflare"),
-	"confluence-client": c("confluence-client", "confluence"),
-	"doppler-client": c("doppler-client", "doppler"),
-	"github-client": c("github-client", "github"),
-	"google-client": c("google-client", "google"),
-	"http-client": c("http-client", "http"),
-	"infisical-client": c("infisical-client", "infisical"),
-	"jira-client": c("jira-client", "jira"),
-	"neon-client": c("neon-client", "neon"),
-	"posthog-client": c("posthog-client", "posthog"),
-	"postman-client": c("postman-client", "postman"),
-	"sentry-client": c("sentry-client", "sentry"),
-	"vercel-client": c("vercel-client", "vercel"),
-	"zendesk-client": c("zendesk-client", "zendesk"),
+	"clerk-client": makeClientEntry("clerk-client", "clerk"),
+	"cloudflare-client": makeClientEntry("cloudflare-client", "cloudflare"),
+	"confluence-client": makeClientEntry("confluence-client", "confluence"),
+	"doppler-client": makeClientEntry("doppler-client", "doppler"),
+	"github-client": makeClientEntry("github-client", "github"),
+	"google-client": makeClientEntry("google-client", "google"),
+	"http-client": makeClientEntry("http-client", "http"),
+	"infisical-client": makeClientEntry("infisical-client", "infisical"),
+	"jira-client": makeClientEntry("jira-client", "jira"),
+	"neon-client": makeClientEntry("neon-client", "neon"),
+	"posthog-client": makeClientEntry("posthog-client", "posthog"),
+	"postman-client": makeClientEntry("postman-client", "postman"),
+	"sentry-client": makeClientEntry("sentry-client", "sentry"),
+	"vercel-client": makeClientEntry("vercel-client", "vercel"),
+	"zendesk-client": makeClientEntry("zendesk-client", "zendesk"),
 };
