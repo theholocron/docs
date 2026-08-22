@@ -1,6 +1,6 @@
 {
-	"display": "Components Doc",
-	"extends": "@theholocron/tsconfig/astro",
-	"include": ["src/**/*.ts", "src/**/*.astro"],
-	"exclude": ["node_modules"]
+  "display": "Components Doc",
+  "extends": "@theholocron/tsconfig/astro",
+  "include": ["src/**/*.ts", "src/**/*.astro"],
+  "exclude": ["node_modules"]
 }

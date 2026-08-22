@@ -1,64 +1,63 @@
 {
-	"name": "@theholocron/components-doc",
-	"version": "1.1.0",
-	"description": "Astro components for Holocron documentation sites.",
-	"keywords": [
-		"astro",
-		"astro-components",
-		"docs",
-		"starlight",
-		"typescript"
-	],
-	"homepage": "https://docs.theholocron.dev/docs/components-doc",
-	"bugs": "https://github.com/theholocron/docs/issues",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/theholocron/docs.git",
-		"directory": "packages/components-doc"
-	},
-	"license": "GPL-3.0",
-	"author": "Newton Koumantzelis",
-	"type": "module",
-	"exports": {
-		".": "./src/index.ts",
-		"./package.json": "./package.json"
-	},
-	"main": "./src/index.ts",
-	"files": [
-		"src",
-		"README.md"
-	],
-	"scripts": {
-		"lint": "eslint .",
-		"test": "vitest run",
-		"test:coverage": "vitest run --coverage",
-		"typecheck": "astro check"
-	},
-	"devDependencies": {
-		"@astrojs/check": "^0.9.10",
-		"@astrojs/starlight": "catalog:",
-		"@theholocron/eslint-config": "catalog:configs",
-		"@theholocron/prettier-config": "catalog:configs",
-		"@theholocron/registry-doc": "workspace:*",
-		"@theholocron/tsconfig": "catalog:configs",
-		"@theholocron/vitest-config": "catalog:configs",
-		"@types/node": "catalog:",
-		"@vitest/coverage-v8": "catalog:",
-		"astro": "catalog:",
-		"prettier": "catalog:",
-		"typescript": "catalog:",
-		"vitest": "catalog:"
-	},
-	"peerDependencies": {
-		"@astrojs/starlight": ">=0.30.0",
-		"astro": ">=5.0.0"
-	},
-	"engines": {
-		"node": ">=22.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"releases": "https://github.com/theholocron/docs/releases",
-	"wiki": "https://github.com/theholocron/docs/wiki"
+  "name": "@theholocron/components-doc",
+  "version": "1.1.0",
+  "description": "Astro components for Holocron documentation sites.",
+  "keywords": [
+    "astro",
+    "astro-components",
+    "docs",
+    "starlight",
+    "typescript"
+  ],
+  "homepage": "https://docs.theholocron.dev/docs/components-doc",
+  "bugs": "https://github.com/theholocron/docs/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theholocron/docs.git",
+    "directory": "packages/components-doc"
+  },
+  "license": "GPL-3.0",
+  "author": "Newton Koumantzelis",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "astro check"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/starlight": "catalog:",
+    "@theholocron/eslint-config": "catalog:configs",
+    "@theholocron/prettier-config": "catalog:configs",
+    "@theholocron/registry-doc": "workspace:*",
+    "@theholocron/tsconfig": "catalog:configs",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "astro": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.30.0",
+    "astro": ">=5.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "releases": "https://github.com/theholocron/docs/releases",
+  "wiki": "https://github.com/theholocron/docs/wiki"
 }

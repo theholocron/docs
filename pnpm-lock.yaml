@@ -258,9 +258,6 @@ importers:
       '@theholocron/tsconfig':
         specifier: catalog:configs
         version: 7.19.1(typescript@5.9.3)
-      '@theholocron/vitest-config':
-        specifier: catalog:configs
-        version: 7.19.1(@vitest/coverage-v8@4.1.10)(vitest@4.1.10)
       '@types/node':
         specifier: 'catalog:'
         version: 22.20.1

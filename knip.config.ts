@@ -18,6 +18,10 @@ const config: KnipConfig = {
 			entry: ["src/**/*.test.ts"],
 			project: ["src/**/*.ts", "*.ts"],
 		},
+		"packages/components-doc": {
+			entry: ["src/**/*.test.ts"],
+			project: ["src/**/*.ts", "src/**/*.astro", "*.ts"],
+		},
 	},
 	ignoreDependencies: [
 		// passed as --config arg to lint-staged binary in .husky/pre-commit
@@ -33,6 +37,8 @@ const config: KnipConfig = {
 		"alex",
 		"prettier",
 		"sort-package-json",
+		// peer dep of components-doc; required by astro check but not statically imported
+		"@astrojs/starlight",
 	],
 	ignoreExportsUsedInFile: true,
 };
