@@ -25,29 +25,27 @@
 	},
 	"main": "./src/index.ts",
 	"files": [
-		"dist",
 		"src",
 		"README.md"
 	],
 	"scripts": {
-		"build": "tsdown",
 		"lint": "eslint .",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "astro check"
 	},
 	"devDependencies": {
-		"@codecov/rollup-plugin": "^2.0.1",
+		"@astrojs/check": "^0.9.10",
+		"@astrojs/starlight": "catalog:",
 		"@theholocron/eslint-config": "catalog:configs",
 		"@theholocron/prettier-config": "catalog:configs",
 		"@theholocron/registry-doc": "workspace:*",
 		"@theholocron/tsconfig": "catalog:configs",
-		"@theholocron/tsdown-config": "catalog:configs",
 		"@theholocron/vitest-config": "catalog:configs",
 		"@types/node": "catalog:",
 		"@vitest/coverage-v8": "catalog:",
+		"astro": "catalog:",
 		"prettier": "catalog:",
-		"tsdown": "catalog:",
 		"typescript": "catalog:",
 		"vitest": "catalog:"
 	},
@@ -55,29 +53,11 @@
 		"@astrojs/starlight": ">=0.30.0",
 		"astro": ">=5.0.0"
 	},
-	"peerDependenciesMeta": {
-		"@astrojs/starlight": {
-			"optional": true
-		},
-		"astro": {
-			"optional": true
-		}
-	},
 	"engines": {
 		"node": ">=22.0.0"
 	},
 	"publishConfig": {
-		"access": "public",
-		"exports": {
-			".": {
-				"types": "./dist/index.d.mts",
-				"import": "./dist/index.mjs",
-				"default": "./dist/index.mjs"
-			},
-			"./package.json": "./package.json"
-		},
-		"main": "./dist/index.mjs",
-		"types": "./dist/index.d.mts"
+		"access": "public"
 	},
 	"releases": "https://github.com/theholocron/docs/releases",
 	"wiki": "https://github.com/theholocron/docs/wiki"

@@ -1,0 +1,12 @@
+---
+interface Props {
+	package: string;
+	dev?: boolean;
+}
+
+const { package: pkg, dev = false } = Astro.props;
+const command = `pnpm add${dev ? " -D" : ""} ${pkg}`;
+---
+
+<h2>Install</h2>
+<pre><code>{command}</code></pre>

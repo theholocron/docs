@@ -1,2 +1,5 @@
-// Astro components are added in feat(components-doc) PRs (tickets 3.2–3.4).
-export {};
+export { default as CapabilitiesTable } from "./CapabilitiesTable.astro";
+export { default as Installation } from "./Installation.astro";
+export { default as PackageGrid } from "./PackageGrid.astro";
+export { default as PackageHeader } from "./PackageHeader.astro";
+export { default as PluginHeader } from "./PluginHeader.astro";
