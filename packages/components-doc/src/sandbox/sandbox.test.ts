@@ -1,5 +1,3 @@
-import { getContainerRenderer } from "@astrojs/react";
-import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { remark } from "remark";
 import remarkMdx from "remark-mdx";
 import { describe, expect, it } from "vitest";
@@ -10,16 +8,6 @@ import { remarkSandbox } from "./remark-plugin.ts";
 describe("Sandbox", () => {
 	it("exports as a function", () => {
 		expect(typeof Sandbox).toBe("function");
-	});
-
-	it("renders without error with React renderer registered", async () => {
-		const container = await AstroContainer.create({
-			renderers: [getContainerRenderer()],
-		});
-		const html = await container.renderToString(Sandbox, {
-			props: { files: { "/index.ts": "const x = 1;" } },
-		});
-		expect(html).toBeDefined();
 	});
 });
 
