@@ -1,3 +1,13 @@
+---
+status: archived # draft → proposed (issue filed) → approved (milestone attached) → archived (shipped)
+---
+
+<!-- Implementation: docs#5 (registry-doc: clients, plugins, cli, configs, utils, themes, docs, skills, templates) -->
+<!-- Released: @theholocron/registry-doc@1.1.0, 2026-08-22 -->
+<!-- Deviated: registry expanded to all org packages (configs, utils, themes, docs, skills, templates) beyond original scope; factory functions renamed (c() → makeClientEntry(), p() → makeHolocronEntry()) for clarity -->
+<!-- Deferred: tickets 1.6 + 1.7 (validate-registry scripts in clients + holocron), 1.8 + 1.9 (AGENTS.md updates) -->
+<!-- Follow-up: Note 3 (.notes/3-components-doc.md), Note 2 (.notes/2-mdx-migration.md) -->
+
 # Note 1 — `@theholocron/registry-doc`
 
 **Repo:** `theholocron/docs` (new monorepo, bootstrapped from `monorepo-template`)
