@@ -1,0 +1,84 @@
+{
+	"name": "@theholocron/components-doc",
+	"version": "1.1.0",
+	"description": "Astro components for Holocron documentation sites.",
+	"keywords": [
+		"astro",
+		"astro-components",
+		"docs",
+		"starlight",
+		"typescript"
+	],
+	"homepage": "https://docs.theholocron.dev/docs/components-doc",
+	"bugs": "https://github.com/theholocron/docs/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/theholocron/docs.git",
+		"directory": "packages/components-doc"
+	},
+	"license": "GPL-3.0",
+	"author": "Newton Koumantzelis",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./package.json": "./package.json"
+	},
+	"main": "./src/index.ts",
+	"files": [
+		"dist",
+		"src",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"lint": "eslint .",
+		"test": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@codecov/rollup-plugin": "^2.0.1",
+		"@theholocron/eslint-config": "catalog:configs",
+		"@theholocron/prettier-config": "catalog:configs",
+		"@theholocron/registry-doc": "workspace:*",
+		"@theholocron/tsconfig": "catalog:configs",
+		"@theholocron/tsdown-config": "catalog:configs",
+		"@theholocron/vitest-config": "catalog:configs",
+		"@types/node": "catalog:",
+		"@vitest/coverage-v8": "catalog:",
+		"prettier": "catalog:",
+		"tsdown": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	},
+	"peerDependencies": {
+		"@astrojs/starlight": ">=0.30.0",
+		"astro": ">=5.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@astrojs/starlight": {
+			"optional": true
+		},
+		"astro": {
+			"optional": true
+		}
+	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"publishConfig": {
+		"access": "public",
+		"exports": {
+			".": {
+				"types": "./dist/index.d.mts",
+				"import": "./dist/index.mjs",
+				"default": "./dist/index.mjs"
+			},
+			"./package.json": "./package.json"
+		},
+		"main": "./dist/index.mjs",
+		"types": "./dist/index.d.mts"
+	},
+	"releases": "https://github.com/theholocron/docs/releases",
+	"wiki": "https://github.com/theholocron/docs/wiki"
+}
