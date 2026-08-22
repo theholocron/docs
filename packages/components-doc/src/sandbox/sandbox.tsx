@@ -2,7 +2,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 import type { SandboxProps } from "./types.ts";
 
-export default function SandboxReact({
+export default function Sandbox({
 	files,
 	template = "vanilla-ts",
 	dependencies,

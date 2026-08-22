@@ -1,9 +1,51 @@
+import { remark } from "remark";
+import remarkMdx from "remark-mdx";
 import { describe, expect, it } from "vitest";
 
 import { Sandbox } from "./index.ts";
+import { remarkSandbox } from "./remark-plugin.ts";
 
 describe("Sandbox", () => {
 	it("exports as a function", () => {
 		expect(typeof Sandbox).toBe("function");
+	});
+});
+
+describe("remarkSandbox", () => {
+	async function process(md: string) {
+		const file = await remark().use(remarkMdx).use(remarkSandbox).process(md);
+		return String(file);
+	}
+
+	it("transforms a sandbox code block into a Sandbox JSX element", async () => {
+		const result = await process("```sandbox\nconsole.log('hi');\n```");
+		expect(result).toContain("<Sandbox");
+		expect(result).toContain("console.log");
+	});
+
+	it("uses vanilla-ts as the default template", async () => {
+		const result = await process("```sandbox\nconst x = 1;\n```");
+		expect(result).toContain('template="vanilla-ts"');
+	});
+
+	it("picks up an explicit template from the lang", async () => {
+		const result = await process("```sandbox react-ts\nconst App = () => <div/>;\n```");
+		expect(result).toContain('template="react-ts"');
+	});
+
+	it("uses the correct entry file for react-ts", async () => {
+		const result = await process("```sandbox react-ts\nconst App = () => null;\n```");
+		expect(result).toContain("/App.tsx");
+	});
+
+	it("allows overriding the entry file path", async () => {
+		const result = await process("```sandbox vanilla-ts /src/client.ts\nconst x = 1;\n```");
+		expect(result).toContain("/src/client.ts");
+	});
+
+	it("leaves non-sandbox code blocks unchanged", async () => {
+		const result = await process("```ts\nconst x = 1;\n```");
+		expect(result).not.toContain("<Sandbox");
+		expect(result).toContain("```");
 	});
 });

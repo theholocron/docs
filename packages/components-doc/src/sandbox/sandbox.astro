@@ -1,10 +1,8 @@
 ---
 import type { SandboxProps } from "./types.ts";
-import SandboxReact from "./sandbox-react.tsx";
+import SandboxReact from "./sandbox.tsx";
 
 type Props = SandboxProps;
-
-const props = Astro.props;
 ---
 
-<SandboxReact client:only="react" {...props} />
+<SandboxReact client:only="react" {...Astro.props} />
