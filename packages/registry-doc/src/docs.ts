@@ -15,6 +15,5 @@ function makeDocsEntry(slug: string, docsPath: string): LinkEntry {
 }
 
 export const docs: LinksRegistry = {
-	"components-doc": makeDocsEntry("components-doc", "components-doc"),
 	"registry-doc": makeDocsEntry("registry-doc", "registry-doc"),
 };
