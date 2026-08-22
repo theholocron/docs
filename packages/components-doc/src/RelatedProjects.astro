@@ -1,0 +1,36 @@
+---
+import { getRegistry } from "@theholocron/registry-doc";
+
+interface Props {
+	current: string;
+	count?: number;
+}
+
+const { current, count = 3 } = Astro.props;
+
+const pool = Object.values(getRegistry()).filter((e) => e.slug !== current);
+const picks = pool.sort(() => Math.random() - 0.5).slice(0, count);
+---
+
+{
+	picks.length > 0 && (
+		<section class="related-projects">
+			<h2>Related Projects</h2>
+			<ul>
+				{picks.map((entry) => (
+					<li>
+						<a href={entry.docsUrl}>
+							<code>{entry.package}</code>
+						</a>
+						<span>
+							{" · "}
+							<a href={entry.npmUrl}>npm</a>
+							{" · "}
+							<a href={entry.githubUrl}>GitHub</a>
+						</span>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}

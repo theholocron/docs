@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { CapabilitiesTable, Installation, PackageGrid, PackageHeader, PluginHeader } from "./index.js";
+import { CapabilitiesTable, Installation, PackageGrid, PackageHeader, PluginHeader, RelatedProjects } from "./index.js";
 
 describe("components-doc", () => {
 	it("exports PackageHeader", () => {
@@ -21,5 +21,9 @@ describe("components-doc", () => {
 
 	it("exports PackageGrid", () => {
 		expect(PackageGrid).toBeDefined();
+	});
+
+	it("exports RelatedProjects", () => {
+		expect(RelatedProjects).toBeDefined();
 	});
 });
