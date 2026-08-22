@@ -1,11 +1,7 @@
 ---
-import type { LinkEntry } from "@theholocron/registry-doc";
+import type { PluginHeaderProps } from "./types.ts";
 
-interface Props {
-	entry: LinkEntry;
-	capability: string;
-	description?: string;
-}
+type Props = PluginHeaderProps;
 
 const { entry, capability, description } = Astro.props;
 ---

@@ -1,12 +1,7 @@
 ---
-interface CapabilitiesRow {
-	capability: string;
-	token: string;
-}
+import type { CapabilitiesTableProps } from "./types.ts";
 
-interface Props {
-	rows: CapabilitiesRow[];
-}
+type Props = CapabilitiesTableProps;
 
 const { rows } = Astro.props;
 ---

@@ -1,10 +1,7 @@
 ---
-import type { LinksRegistry } from "@theholocron/registry-doc";
+import type { PackageGridProps } from "./types.ts";
 
-interface Props {
-	packages: LinksRegistry;
-	type?: "clients" | "plugins";
-}
+type Props = PackageGridProps;
 
 const { packages, type = "clients" } = Astro.props;
 const entries = Object.values(packages);

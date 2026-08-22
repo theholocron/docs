@@ -1,10 +1,9 @@
 ---
 import { getRegistry } from "@theholocron/registry-doc";
 
-interface Props {
-	current: string;
-	count?: number;
-}
+import type { RelatedProjectsProps } from "./types.ts";
+
+type Props = RelatedProjectsProps;
 
 const { current, count = 3 } = Astro.props;
 

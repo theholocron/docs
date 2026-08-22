@@ -1,8 +1,7 @@
 ---
-interface Props {
-	package: string;
-	dev?: boolean;
-}
+import type { InstallationProps } from "./types.ts";
+
+type Props = InstallationProps;
 
 const { package: pkg, dev = false } = Astro.props;
 const command = `pnpm add${dev ? " -D" : ""} ${pkg}`;
