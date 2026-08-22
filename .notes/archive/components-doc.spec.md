@@ -1,3 +1,13 @@
+---
+status: archived # draft → proposed (issue filed) → approved (milestone attached) → archived (shipped)
+---
+
+<!-- Implementation: docs#7 (scaffold + all components + Sandbox + remark plugin) -->
+<!-- Released: @theholocron/components-doc@1.2.0, 2026-08-22 -->
+<!-- Deviated: all tickets collapsed into one PR; added RelatedProjects (cross-registry random picks); added Sandbox component via Sandpack + remarkSandbox remark plugin (sandbox platform decision made — CodeSandbox); per-component directories with types.ts + co-located tests; ships source not dist (no tsdown); getViteConfig + AstroContainer for rendering tests; Installation gained global flag; sandbox.astro excluded from coverage (client:only cannot SSR) -->
+<!-- Deferred: sandboxUrl entries in registry-doc (added as sandboxes become available) -->
+<!-- Follow-up: Note 2 (.notes/2-mdx-migration.md) — MDX migration across consuming repos -->
+
 # Note 3 — `@theholocron/components-doc`
 
 **Repo:** `theholocron/docs` monorepo, `packages/components-doc/`
@@ -70,10 +80,11 @@ Same as `<PackageHeader>` but adds a capability label/badge.
 interface InstallationProps {
   package: string; // "@theholocron/github-client"
   dev?: boolean; // default false; plugins use true
+  global?: boolean; // default false; CLI tools use true
 }
 ```
 
-Renders a `## Install` heading + `pnpm add [-D] {package}` code block.
+Renders a `## Install` heading + `pnpm add [-D|-g] {package}` code block.
 
 ---
 
