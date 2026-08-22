@@ -1,0 +1,34 @@
+---
+import { getRegistry } from "@theholocron/registry-doc";
+
+import type { RelatedProjectsProps } from "./types.ts";
+import { pickRelated } from "./utils.ts";
+
+type Props = RelatedProjectsProps;
+
+const { current, count = 3 } = Astro.props;
+const picks = pickRelated(Object.values(getRegistry()), current, count);
+---
+
+{
+	picks.length > 0 && (
+		<section class="related-projects">
+			<h2>Related Projects</h2>
+			<ul>
+				{picks.map((entry) => (
+					<li>
+						<a href={entry.docsUrl}>
+							<code>{entry.package}</code>
+						</a>
+						<span>
+							{" · "}
+							<a href={entry.npmUrl}>npm</a>
+							{" · "}
+							<a href={entry.githubUrl}>GitHub</a>
+						</span>
+					</li>
+				))}
+			</ul>
+		</section>
+	)
+}

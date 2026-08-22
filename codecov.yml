@@ -27,6 +27,10 @@ component_management:
       - type: patch
         target: auto
   individual_components:
+    - component_id: components-doc
+      name: "components-doc"
+      paths:
+        - packages/components-doc/**
     - component_id: registry-doc
       name: "registry-doc"
       paths:

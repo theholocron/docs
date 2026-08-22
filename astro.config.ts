@@ -6,7 +6,16 @@ export default defineConfig({
 	docs: {
 		name: "Docs",
 		github: "docs",
-		sidebar: [{ label: "Overview", slug: "" }],
+		sidebar: [
+			{ label: "Overview", slug: "" },
+			{
+				label: "Packages",
+				items: [
+					{ label: "components-doc", slug: "components-doc" },
+					{ label: "registry-doc", slug: "registry-doc" },
+				],
+			},
+		],
 	},
 	starlight,
 	docsTheme,

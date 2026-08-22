@@ -5,26 +5,18 @@ description: Documentation infrastructure for the Holocron ecosystem.
 
 `theholocron/docs` is the home for shared documentation tooling across all Holocron repos.
 
-## Structure
+## Packages
 
-```
-packages/
-  registry-doc/    Cross-repo package registry and link utilities
-```
+| Package                                          | Description                                                          |
+| ------------------------------------------------ | -------------------------------------------------------------------- |
+| [`@theholocron/components-doc`](/components-doc) | Astro components for docs sites — headers, install blocks, sandboxes |
+| [`@theholocron/registry-doc`](/registry-doc)     | Cross-repo package registry and link utilities                       |
 
-Add new packages under `packages/` with the `-doc` suffix — Turborepo handles build ordering and caching across the workspace.
+## How it fits together
 
-## What's included
+`@theholocron/registry-doc` is the single source of truth for every package name, docs URL, npm link, and GitHub URL in the org. `@theholocron/components-doc` consumes that data to render consistent headers, installation blocks, capability tables, and interactive sandboxes across every docs site.
 
-- **TypeScript** across all packages with shared `@theholocron/tsconfig` presets
-- **tsdown** for compiling each package's `src/` → `dist/`
-- **Vitest** with coverage for all packages
-- **ESLint + Prettier** via shared `@theholocron/eslint-config` and `@theholocron/prettier-config`
-- **Turborepo** for task orchestration — `pnpm build`, `pnpm test`, `pnpm lint`, `pnpm typecheck` all run across packages in dependency order
-- **pnpm workspaces** with catalog pinning for consistent dependency versions
-- **semantic-release** with lockstep versioning — all packages share a single version
-- **Husky + lint-staged** via `@theholocron/lint-staged-config`
-- Full CI/CD via reusable workflows in `theholocron/.github`
+Every `theholocron` docs site (clients, holocron, utils) imports from these packages so cross-repo links never go stale and page layouts stay consistent without per-repo maintenance.
 
 ## Development
 

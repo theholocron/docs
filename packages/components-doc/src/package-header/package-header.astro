@@ -1,0 +1,27 @@
+---
+import type { PackageHeaderProps } from "./types.ts";
+
+type Props = PackageHeaderProps;
+
+const { entry, description } = Astro.props;
+---
+
+<div class="package-header">
+	<p><code>{entry.package}</code></p>
+	{description && <p>{description}</p>}
+	<p>
+		<a href={entry.npmUrl} target="_blank" rel="noopener noreferrer">npm</a>
+		{" · "}
+		<a href={entry.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+		{
+			entry.sandboxUrl && (
+				<>
+					{" · "}
+					<a href={entry.sandboxUrl} target="_blank" rel="noopener noreferrer">
+						Sandbox
+					</a>
+				</>
+			)
+		}
+	</p>
+</div>

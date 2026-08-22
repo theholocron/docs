@@ -18,6 +18,10 @@ const config: KnipConfig = {
 			entry: ["src/**/*.test.ts"],
 			project: ["src/**/*.ts", "*.ts"],
 		},
+		"packages/components-doc": {
+			entry: ["src/**/*.test.ts"],
+			project: ["src/**/*.ts", "src/**/*.astro", "*.ts"],
+		},
 	},
 	ignoreDependencies: [
 		// passed as --config arg to lint-staged binary in .husky/pre-commit
@@ -33,6 +37,11 @@ const config: KnipConfig = {
 		"alex",
 		"prettier",
 		"sort-package-json",
+		// peer deps of components-doc; required by Astro at runtime but never statically imported
+		// @astrojs/react — powers client:only="react" in sandbox.astro
+		// @astrojs/starlight — required by astro check for type resolution
+		"@astrojs/react",
+		"@astrojs/starlight",
 	],
 	ignoreExportsUsedInFile: true,
 };
