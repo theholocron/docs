@@ -2,13 +2,12 @@
 import { getRegistry } from "@theholocron/registry-doc";
 
 import type { RelatedProjectsProps } from "./types.ts";
+import { pickRelated } from "./utils.ts";
 
 type Props = RelatedProjectsProps;
 
 const { current, count = 3 } = Astro.props;
-
-const pool = Object.values(getRegistry()).filter((e) => e.slug !== current);
-const picks = pool.sort(() => Math.random() - 0.5).slice(0, count);
+const picks = pickRelated(Object.values(getRegistry()), current, count);
 ---
 
 {

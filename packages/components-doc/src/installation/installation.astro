@@ -3,8 +3,9 @@ import type { InstallationProps } from "./types.ts";
 
 type Props = InstallationProps;
 
-const { package: pkg, dev = false } = Astro.props;
-const command = `pnpm add${dev ? " -D" : ""} ${pkg}`;
+const { package: pkg, dev = false, global: isGlobal = false } = Astro.props;
+const flag = isGlobal ? " -g" : dev ? " -D" : "";
+const command = `pnpm add${flag} ${pkg}`;
 ---
 
 <h2>Install</h2>

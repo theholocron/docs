@@ -1,12 +1,6 @@
-export { default as CapabilitiesTable } from "./capabilities-table/capabilities-table.astro";
-export type { CapabilitiesRow, CapabilitiesTableProps } from "./capabilities-table/types.ts";
-export { default as Installation } from "./installation/installation.astro";
-export type { InstallationProps } from "./installation/types.ts";
-export { default as PackageGrid } from "./package-grid/package-grid.astro";
-export type { PackageGridProps } from "./package-grid/types.ts";
-export { default as PackageHeader } from "./package-header/package-header.astro";
-export type { PackageHeaderProps } from "./package-header/types.ts";
-export { default as PluginHeader } from "./plugin-header/plugin-header.astro";
-export type { PluginHeaderProps } from "./plugin-header/types.ts";
-export { default as RelatedProjects } from "./related-projects/related-projects.astro";
-export type { RelatedProjectsProps } from "./related-projects/types.ts";
+export * from "./capabilities-table/index.ts";
+export * from "./installation/index.ts";
+export * from "./package-grid/index.ts";
+export * from "./package-header/index.ts";
+export * from "./plugin-header/index.ts";
+export * from "./related-projects/index.ts";
