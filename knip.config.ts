@@ -20,7 +20,7 @@ const config: KnipConfig = {
 		},
 		"packages/components-doc": {
 			entry: ["src/**/*.test.ts"],
-			project: ["src/**/*.ts", "src/**/*.astro", "src/**/*.mdx", "*.ts"],
+			project: ["src/**/*.ts", "src/**/*.astro", "*.ts"],
 		},
 	},
 	ignoreDependencies: [
@@ -37,14 +37,14 @@ const config: KnipConfig = {
 		"alex",
 		"prettier",
 		"sort-package-json",
-		// peer deps of components-doc; required by Astro at runtime but never statically imported
-		// @astrojs/react — powers client:only="react" in sandbox.astro
-		// @astrojs/starlight — required by astro check for type resolution
-		"@astrojs/react",
+		// peer dep of @astrojs/starlight — required by astro check for type resolution
 		"@astrojs/starlight",
 		// used in docs/content/dev.mdx — Knip cannot follow imports from compiled .mdx content files
 		"@theholocron/components-doc",
 		"@theholocron/registry-doc",
+		// peer deps of @astrojs/react — required by Astro at runtime for React hydration
+		"react",
+		"react-dom",
 	],
 	ignoreExportsUsedInFile: true,
 };

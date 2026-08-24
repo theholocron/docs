@@ -25,6 +25,7 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@astrojs/react": "^4.0.0",
     "@astrojs/starlight": "catalog:",
     "@commitlint/cli": "catalog:",
     "@eslint/js": "catalog:",
