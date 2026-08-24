@@ -19,7 +19,7 @@ const config: KnipConfig = {
 			project: ["src/**/*.ts", "*.ts"],
 		},
 		"packages/components-doc": {
-			entry: ["src/**/*.test.ts"],
+			entry: ["src/**/*.test.ts", "src/**/*.mdx"],
 			project: ["src/**/*.ts", "src/**/*.astro", "src/**/*.mdx", "*.ts"],
 		},
 	},
