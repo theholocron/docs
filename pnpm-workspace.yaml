@@ -34,7 +34,7 @@ catalog:
 # Shared configs — release in lockstep; bump all entries together.
 catalogs:
   configs:
-    '@theholocron/astro-config': ^7.22.2
+    '@theholocron/astro-config': ^7.24.0
     '@theholocron/commitlint-config': ^7.22.0
     '@theholocron/eslint-config': ^7.23.1
     '@theholocron/holocron-config': ^7.22.0

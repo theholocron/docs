@@ -11,6 +11,7 @@ import {
   PluginHeader,
   RelatedProjects,
   RepoIndex,
+  Sandbox,
 } from "@theholocron/components-doc";
 import { getClients, getPlugins } from "@theholocron/registry-doc";
 
@@ -119,4 +120,22 @@ Picks a random cross-registry selection; refreshes on each build. `count` defaul
 
 ## Sandbox
 
-`Sandbox` requires `@astrojs/react` and `client:only="react"`. See the [components-doc](/components-doc) page for usage — it cannot be rendered in this static preview without the React integration wired up in `astro.config.ts`.
+Embeds an interactive Sandpack sandbox. Runs client-side only via `client:only="react"`.
+
+<Sandbox
+  template="vanilla-ts"
+  files={{
+    "/index.ts": `import { createGitHubClient } from "@theholocron/github-client";\n\nconst client = createGitHubClient({ token: process.env.GITHUB_TOKEN });\nconsole.log(client);`,
+  }}
+  dependencies={{ "@theholocron/github-client": "latest" }}
+/>
+
+---
+
+<Sandbox
+  template="react-ts"
+  files={{
+    "/App.tsx": `export default function App() {\n  return <h1>Hello from Sandpack</h1>;\n}`,
+  }}
+  height={300}
+/>
