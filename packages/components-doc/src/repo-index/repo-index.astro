@@ -16,13 +16,13 @@ type Props = RepoIndexProps;
 const { type } = Astro.props;
 
 const registryMap = {
-	clients: { packages: getClients(), gridType: "clients" as const },
-	configs: { packages: getConfigs(), gridType: "clients" as const },
-	docs: { packages: getDocs(), gridType: "clients" as const },
+	clients: { packages: getClients(), gridType: "packages" as const },
+	configs: { packages: getConfigs(), gridType: "packages" as const },
+	docs: { packages: getDocs(), gridType: "packages" as const },
 	plugins: { packages: getPlugins(), gridType: "plugins" as const },
-	skills: { packages: getSkills(), gridType: "clients" as const },
-	themes: { packages: getThemes(), gridType: "clients" as const },
-	utils: { packages: getUtils(), gridType: "clients" as const },
+	skills: { packages: getSkills(), gridType: "packages" as const },
+	themes: { packages: getThemes(), gridType: "packages" as const },
+	utils: { packages: getUtils(), gridType: "packages" as const },
 };
 
 const { packages, gridType } = registryMap[type];
