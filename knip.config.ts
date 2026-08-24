@@ -21,6 +21,9 @@ const config: KnipConfig = {
 		"packages/components-doc": {
 			entry: ["src/**/*.test.ts"],
 			project: ["src/**/*.ts", "src/**/*.astro", "*.ts"],
+			// disable Astro plugin to suppress the proactive .mdx hint — .astro files
+			// are tracked explicitly above; there are no .mdx files in this package
+			astro: false,
 		},
 	},
 	ignoreDependencies: [
@@ -42,9 +45,6 @@ const config: KnipConfig = {
 		// used in docs/content/dev.mdx — Knip cannot follow imports from compiled .mdx content files
 		"@theholocron/components-doc",
 		"@theholocron/registry-doc",
-		// peer deps of @astrojs/react — required by Astro at runtime for React hydration
-		"react",
-		"react-dom",
 	],
 	ignoreExportsUsedInFile: true,
 };
