@@ -14,6 +14,13 @@ const config: Linter.Config[] = [
 		},
 	},
 	{ ignores: ["docs/**", "**/dist/**", "**/coverage/**"] },
+	// Root package.json is a private workspace root, not a published library.
+	// sort-package-json (pre-commit) and the library bundle's sort-properties rule
+	// use different canonical field orderings; suppress the rule here.
+	{
+		files: ["package.json"],
+		rules: { "package-json/sort-properties": "off" },
+	},
 ];
 
 export default config;
