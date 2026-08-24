@@ -15,6 +15,7 @@ export default defineConfig({
 					{ label: "registry-doc", slug: "registry-doc" },
 				],
 			},
+			{ label: "Component Preview", slug: "dev" },
 		],
 	},
 	starlight,
