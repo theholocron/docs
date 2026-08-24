@@ -32,7 +32,6 @@
   "main": "./src/index.ts",
   "files": [
     "dist",
-    "README.md",
     "src"
   ],
   "scripts": {
