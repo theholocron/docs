@@ -23,7 +23,7 @@
   "exports": {
     ".": "./src/index.ts",
     "./markdown": {
-      "types": "./src/markdown/index.ts",
+      "types": "./dist/markdown/index.d.mts",
       "import": "./dist/markdown/index.mjs",
       "default": "./dist/markdown/index.mjs"
     },
@@ -31,9 +31,9 @@
   },
   "main": "./src/index.ts",
   "files": [
-    "src",
     "dist",
-    "README.md"
+    "README.md",
+    "src"
   ],
   "scripts": {
     "build": "tsdown",
