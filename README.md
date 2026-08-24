@@ -20,9 +20,10 @@ pnpm lint          # lint all packages
 
 ## Packages
 
-| Package                                                | Description                                    |
-| ------------------------------------------------------ | ---------------------------------------------- |
-| [`@theholocron/registry-doc`](./packages/registry-doc) | Cross-repo package registry and link utilities |
+| Package                                                    | Description                                       |
+| ---------------------------------------------------------- | ------------------------------------------------- |
+| [`@theholocron/components-doc`](./packages/components-doc) | Astro components for Holocron documentation sites |
+| [`@theholocron/registry-doc`](./packages/registry-doc)     | Cross-repo package registry and link utilities    |
 
 ## Releases
 

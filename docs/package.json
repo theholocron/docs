@@ -6,5 +6,9 @@
     "build": "astro build --root ..",
     "dev": "astro dev --root ..",
     "preview": "astro preview --root .."
+  },
+  "dependencies": {
+    "@theholocron/components-doc": "workspace:*",
+    "@theholocron/registry-doc": "workspace:*"
   }
 }
