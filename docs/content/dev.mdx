@@ -1,0 +1,122 @@
+---
+title: Component Preview
+description: Live preview of all @theholocron/components-doc components for development.
+---
+
+import {
+  CapabilitiesTable,
+  Installation,
+  PackageGrid,
+  PackageHeader,
+  PluginHeader,
+  RelatedProjects,
+  RepoIndex,
+} from "@theholocron/components-doc";
+import { getClients, getPlugins } from "@theholocron/registry-doc";
+
+export const client = getClients()["github-client"];
+export const plugin = getPlugins()["holocron-plugin-sentry"];
+export const clientWithSandbox = {
+  ...client,
+  sandboxUrl: "https://codesandbox.io/p/sandbox/new",
+};
+
+---
+
+## PackageHeader
+
+Renders the package name, links, and optional description. The `sandboxUrl` field on the entry adds a Sandbox link.
+
+<PackageHeader entry={client} description="TypeScript client for the GitHub REST API." />
+
+---
+
+<PackageHeader entry={clientWithSandbox} description="With sandboxUrl set on the entry." />
+
+---
+
+## PluginHeader
+
+Same as `PackageHeader` with a capability badge appended.
+
+<PluginHeader
+  entry={plugin}
+  capability="observability"
+  description="Sentry error tracking and performance monitoring."
+/>
+
+---
+
+<PluginHeader entry={plugin} capability="observability" />
+
+---
+
+## Installation
+
+Renders a `pnpm add` block. Supports `dev` and `global` variants.
+
+<Installation package="@theholocron/github-client" />
+
+<Installation package="@theholocron/eslint-config" dev />
+
+<Installation package="@theholocron/cli" global />
+
+---
+
+## CapabilitiesTable
+
+Two-column table of capability / token pairs for plugin pages.
+
+<CapabilitiesTable
+  rows={[
+    { capability: "observability", token: "HOLOCRON_SENTRY_TOKEN (sentry)" },
+    { capability: "error-tracking", token: "SENTRY_DSN" },
+    { capability: "performance", token: "SENTRY_TRACES_SAMPLE_RATE" },
+  ]}
+/>
+
+---
+
+## PackageGrid
+
+Package table from a `LinksRegistry`. Shows "Package" header by default, "Plugin" when `type="plugins"`.
+
+<PackageGrid packages={getClients()} />
+
+---
+
+<PackageGrid packages={getPlugins()} type="plugins" />
+
+---
+
+## RepoIndex
+
+Wraps `PackageGrid` with the registry getter baked in — driven by the `type` prop.
+
+<RepoIndex type="clients" />
+
+---
+
+<RepoIndex type="plugins" />
+
+---
+
+<RepoIndex type="utils" />
+
+---
+
+## RelatedProjects
+
+Picks a random cross-registry selection; refreshes on each build. `count` defaults to 3.
+
+<RelatedProjects current="github-client" />
+
+---
+
+<RelatedProjects current="holocron-plugin-sentry" count={5} />
+
+---
+
+## Sandbox
+
+`Sandbox` requires `@astrojs/react` and `client:only="react"`. See the [components-doc](/components-doc) page for usage — it cannot be rendered in this static preview without the React integration wired up in `astro.config.ts`.
