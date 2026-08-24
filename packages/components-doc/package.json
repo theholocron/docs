@@ -21,6 +21,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./markdown": "./src/markdown/index.ts",
     "./package.json": "./package.json"
   },
   "main": "./src/index.ts",
