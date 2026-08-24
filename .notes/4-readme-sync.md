@@ -1,114 +1,248 @@
-# Note 4 — README ↔ docs sync
+# Note 4 — README + docs sync template
 
-**Repos affected:** `theholocron/holocron` (CLI change), all repos with docs
-**Depends on:** Notes 1, 2, 3 — specifically `<PackageGrid>` from `components-doc`.
+**Repos affected:** `theholocron/docs` (new components), `theholocron/holocron` (CLI
+extension), all repos with docs
+**Depends on:** Notes 1, 2, 3 — `registry-doc` data + `components-doc` components.
 
 ---
 
 ## Problem
 
-`docs/src/content/docs/index.mdx` and `README.md` both describe the same
-project but are maintained separately. `holocron sync-readme` already keeps
-the README description in sync from `holocron.config.ts`, but the docs index
-is untouched and drifts.
+Every repo's `README.md` and `docs/src/content/docs/index.mdx` describe the same
+project from different angles and drift apart over time. `holocron sync-readme`
+already syncs the `description` marker block from `holocron.config.ts`, but everything
+else — packages table, install instructions, development scripts, releases link — is
+maintained by hand and gets stale.
+
+The components (Note 3) and registry (Note 1) already exist. The data needed to
+generate both surfaces is already structured. What's missing is the assembly layer.
 
 ---
 
-## Decision: component-driven index, sync only frontmatter
+## Design: one template, two renderers
 
-The body of `docs/index.mdx` becomes fully component-driven — no hardcoded
-prose. `<PackageGrid>` renders from `registry-doc`, so the index never has
-content to drift. The only field that can become stale is the frontmatter
-`description`, which `holocron sync-readme` already manages for `README.md`.
+A `RepoTemplate` config type describes the repo's shape. Two renderers consume it:
 
-Extend `sync-readme` to also update the `description` frontmatter field in
-`docs/src/content/docs/index.mdx` when that file exists. One command keeps
-both in sync.
+- **Astro component** (`<RepoIndex>`) → renders the docs `index.mdx` landing page
+- **Markdown generator** (`generateReadme()`) → produces README marker-block content
+
+`holocron sync-readme` calls the markdown generator and writes each section into the
+appropriate `<!-- holocron:xxx -->` marker block in `README.md`. The docs index calls
+`<RepoIndex>` directly at build time.
+
+Both pull from the same source: `registry-doc` for package data,
+`holocron.config.ts` for description, `package.json` for scripts and package name.
 
 ---
 
-## What `index.mdx` looks like
+## Section inventory
 
-**`theholocron/clients`**
+Each section appears conditionally based on repo type.
+
+| Section             | When                              | Source                                                                        |
+| ------------------- | --------------------------------- | ----------------------------------------------------------------------------- |
+| **Title**           | Always                            | `package.json` `name` — rendered as inline code: `` `@theholocron/clients` `` |
+| **Description**     | Always                            | `holocron.config.ts` `description` field                                      |
+| **Getting Started** | Templates only                    | Static content: how to scaffold from this template                            |
+| **What's Included** | Templates only                    | Static content: what the template ships                                       |
+| **Packages**        | Monorepos                         | `registry-doc` — `getClients()`, `getPlugins()`, `getUtils()`, etc.           |
+| **Installation**    | Non-monorepos or root of any repo | `package.json` `name` — `pnpm add <pkg>`                                      |
+| **Usage**           | Always                            | Custom — `<!-- holocron:usage -->` marker; user-maintained                    |
+| **Custom**          | Optional                          | `<!-- holocron:custom -->` marker; user-maintained; omitted if empty          |
+| **Development**     | Always                            | `package.json` `scripts` — filtered to the standard set                       |
+| **Releases**        | Always                            | Standard text; URL derived from `holocron.config.ts` `homepage`               |
+
+### Repo type matrix
+
+| Repo                      | Type     | Gets Packages | Gets Installation | Gets Getting Started |
+| ------------------------- | -------- | ------------- | ----------------- | -------------------- |
+| `clients`                 | monorepo | ✓ (clients)   | —                 | —                    |
+| `holocron`                | monorepo | ✓ (plugins)   | ✓ (cli)           | —                    |
+| `utils`                   | monorepo | ✓ (utils)     | —                 | —                    |
+| `themes`                  | monorepo | ✓ (themes)    | —                 | —                    |
+| `configs`                 | monorepo | ✓ (configs)   | —                 | —                    |
+| `docs`                    | monorepo | ✓ (docs)      | —                 | —                    |
+| `skills`                  | single   | —             | ✓                 | —                    |
+| `cli-template`            | template | —             | ✓                 | ✓                    |
+| `node-template`           | template | —             | ✓                 | ✓                    |
+| `react-template`          | template | —             | ✓                 | ✓                    |
+| `monorepo-template`       | template | —             | ✓                 | ✓                    |
+| `nextjs-template`         | template | —             | ✓                 | ✓                    |
+| `monorepo-react-template` | template | —             | ✓                 | ✓                    |
+
+### Development section — script filter
+
+Parse root `package.json` `scripts`. Show only these keys (if present), in this order:
+
+```
+build  dev  preview  start  docs:dev  docs:build  docs:preview
+lint   test  test:coverage  test:storybook  test:cypress
+typecheck  audit
+```
+
+Omit: `release`, `prepare`, `postbuild`, `format`, `holocron`, `start:storybook`,
+`build:storybook`, `build:storybook:chromatic`, `prepreview`.
+
+### Releases section
+
+Standard across all repos:
+
+```md
+Automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
+See the [releases page]({homepage}/releases) and [CHANGELOG.md](./CHANGELOG.md).
+```
+
+`homepage` comes from `package.json` `homepage` field (already set on every repo).
+
+---
+
+## `<RepoIndex>` Astro component
+
+Lives in `@theholocron/components-doc`. Accepts a `RepoIndexProps` and renders the
+standard docs landing page — replaces every repo's hand-written `index.mdx` body.
+
+```tsx
+interface RepoIndexProps {
+  type: "clients" | "plugins" | "utils" | "themes" | "configs" | "docs" | "skills";
+  // type drives which registry getter + PackageGrid variant to use
+}
+```
+
+Usage:
 
 ```mdx
 ---
-title: Overview
+title: Clients
 description: API clients and shared HTTP primitives.
+sidebar:
+  hidden: true
 ---
 
-import { PackageGrid } from "@theholocron/components-doc";
-import { getClients } from "@theholocron/registry-doc";
+import { RepoIndex } from "@theholocron/components-doc";
 
-<PackageGrid packages={getClients()} />
+<RepoIndex type="clients" />
 ```
 
-**`theholocron/holocron`** (plugin overview page)
+`<RepoIndex>` internally calls the appropriate registry getter and renders
+`<PackageGrid>` (monorepos) or the appropriate alternative (single packages).
 
-```mdx
----
-title: Plugins
-description: First-party plugins for the Holocron CLI.
 ---
 
-import { PackageGrid } from "@theholocron/components-doc";
-import { getPlugins } from "@theholocron/registry-doc";
+## `generateReadme()` — markdown generator
 
-<PackageGrid packages={getPlugins()} type="plugins" />
+Exported from `@theholocron/components-doc/markdown` (new subpath). Returns an
+object of named markdown strings, one per marker block:
+
+```ts
+interface ReadmeSections {
+  description: string; // <!-- holocron:description -->
+  packages?: string; // <!-- holocron:packages -->
+  installation?: string; // <!-- holocron:installation -->
+  development: string; // <!-- holocron:development -->
+  releases: string; // <!-- holocron:releases -->
+}
+
+function generateReadme(config: RepoTemplateConfig): ReadmeSections;
 ```
 
-The body is static component calls — nothing hardcoded, nothing to drift.
+`RepoTemplateConfig` is assembled by `holocron sync-readme` from `holocron.config.ts`,
+`package.json`, and the appropriate `registry-doc` getter.
 
 ---
 
-## `sync-readme` extension
+## `sync-readme` extension (holocron CLI)
+
+Extends the existing `sync-readme` command with two new steps:
 
 ```
-holocron sync-readme now does:
-  1. Read description from holocron.config.ts                    (existing)
-  2. Write <!-- holocron:description --> block in README.md       (existing)
-  3. If docs/src/content/docs/index.mdx exists:
-       parse YAML frontmatter, update description field, write    (new)
+sync-readme now does:
+  1. Read description from holocron.config.ts                  (existing)
+  2. Write <!-- holocron:description --> in README.md           (existing)
+  3. Write <!-- holocron:installation --> in README.md          (existing)
+  4. Detect repo type (monorepo / single / template)            (new)
+  5. Call generateReadme() with type + registry + scripts       (new)
+  6. Write <!-- holocron:packages --> if monorepo               (new)
+  7. Write <!-- holocron:development --> from filtered scripts   (new)
+  8. Write <!-- holocron:releases --> standard text             (new)
+  9. If docs/src/content/docs/index.mdx exists:
+       update frontmatter description field                     (new, small)
 ```
 
-The frontmatter update is a targeted YAML field replace — not full template
-generation, not marker blocks. Just one field.
+Marker blocks not present in a README are silently skipped. New repos start with the
+full marker set; existing repos can adopt incrementally.
 
 ---
 
-## Developer workflow after this lands
+## README marker set
 
-Adding a new client package:
+Each repo's `README.md` uses these markers. Content between them is replaced on every
+`sync-readme` run.
 
-1. Create `packages/<slug>-client/`
-2. Open PR in `theholocron/docs` to add entry to `registry-doc`
-3. Create `docs/src/content/docs/<slug>.mdx` using the standard MDX template
-4. Run `holocron sync-readme` — updates README description and docs `index.mdx`
-   frontmatter automatically
-5. `<PackageGrid>` on the docs index picks up the new entry from `registry-doc`
-   at build time — no manual edit to `index.mdx` needed
+```md
+# `@theholocron/<name>`
 
----
+<!-- holocron:description -->
 
-## What this does NOT do
+…description from config…
+<!-- /holocron:description -->
 
-- Does not generate `index.mdx` from scratch — it's authored once, then only
-  `description` is synced.
-- Does not symlink README into docs or vice versa — the content genuinely
-  differs (README has GitHub badges and marker blocks; docs index is a
-  component-rendered grid).
-- Does not touch per-package doc pages — those are handled by Note 3 components.
+<!-- holocron:getting-started -->
+
+…template-only static content…
+<!-- /holocron:getting-started -->
+
+<!-- holocron:packages -->
+
+…generated packages table…
+<!-- /holocron:packages -->
+
+<!-- holocron:installation -->
+
+…generated install block…
+<!-- /holocron:installation -->
+
+## Usage
+
+<!-- holocron:usage -->
+
+…user-maintained…
+<!-- /holocron:usage -->
+
+<!-- holocron:custom -->
+
+…user-maintained, optional…
+<!-- /holocron:custom -->
+
+## Development
+
+<!-- holocron:development -->
+
+…generated from package.json scripts…
+<!-- /holocron:development -->
+
+## Releases
+
+<!-- holocron:releases -->
+
+…generated standard text…
+<!-- /holocron:releases -->
+```
+
+`<!-- holocron:getting-started -->`, `<!-- holocron:packages -->`, and
+`<!-- holocron:custom -->` are omitted from non-template / non-monorepo / no-custom
+READMEs respectively.
 
 ---
 
 ## Tickets
 
-| #   | Repo       | PR title                                                                  | Notes                                                                 |
-| --- | ---------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| 4.1 | `clients`  | `refactor(docs): replace index.md with component-driven index.mdx`        | First consumer; validates pattern; can combine with Note 2 ticket 2.4 |
-| 4.2 | `holocron` | `refactor(docs): replace plugin overview with component-driven index.mdx` | Can combine with 2.5                                                  |
-| 4.3 | `holocron` | `feat(sync-readme): update docs/index.mdx frontmatter description`        | CLI change; small, targeted YAML update                               |
-| 4.4 | `utils`    | `refactor(docs): replace index.md with component-driven index.mdx`        | Same pattern                                                          |
+| #   | Repo       | PR title                                                               | Notes                                                                     |
+| --- | ---------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 4.1 | `docs`     | `feat(components-doc): add RepoIndex component`                        | New Astro component; calls registry getter based on `type` prop           |
+| 4.2 | `docs`     | `feat(components-doc): add generateReadme markdown generator`          | New `/markdown` subpath; `generateReadme()` returns named section strings |
+| 4.3 | `holocron` | `feat(sync-readme): generate packages, development, releases sections` | Extends sync-readme; imports generateReadme from components-doc           |
+| 4.4 | `holocron` | `feat(sync-readme): update docs/index.mdx frontmatter description`     | Small targeted YAML update; can combine with 4.3                          |
+| 4.5 | all repos  | `chore: adopt sync-readme marker blocks in README`                     | Add marker blocks to each repo's README; run sync-readme to populate      |
+| 4.6 | all repos  | `refactor(docs): adopt RepoIndex in docs index.mdx`                    | Replace hand-written index.mdx body with `<RepoIndex type="..." />`       |
 
-4.1 + 4.2 can be rolled into the Note 2 migration PRs (2.4 + 2.5) to avoid
-extra PRs per repo.
+4.3 + 4.4 can be one PR. 4.5 + 4.6 are per-repo and can be batched like Note 2.
