@@ -184,21 +184,25 @@ Each repo's `README.md` uses these markers. Content between them is replaced on 
 <!-- holocron:description -->
 
 …description from config…
+
 <!-- /holocron:description -->
 
 <!-- holocron:getting-started -->
 
 …template-only static content…
+
 <!-- /holocron:getting-started -->
 
 <!-- holocron:packages -->
 
 …generated packages table…
+
 <!-- /holocron:packages -->
 
 <!-- holocron:installation -->
 
 …generated install block…
+
 <!-- /holocron:installation -->
 
 ## Usage
@@ -206,11 +210,13 @@ Each repo's `README.md` uses these markers. Content between them is replaced on 
 <!-- holocron:usage -->
 
 …user-maintained…
+
 <!-- /holocron:usage -->
 
 <!-- holocron:custom -->
 
 …user-maintained, optional…
+
 <!-- /holocron:custom -->
 
 ## Development
@@ -218,6 +224,7 @@ Each repo's `README.md` uses these markers. Content between them is replaced on 
 <!-- holocron:development -->
 
 …generated from package.json scripts…
+
 <!-- /holocron:development -->
 
 ## Releases
@@ -225,6 +232,7 @@ Each repo's `README.md` uses these markers. Content between them is replaced on 
 <!-- holocron:releases -->
 
 …generated standard text…
+
 <!-- /holocron:releases -->
 ```
 
