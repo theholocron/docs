@@ -1,0 +1,17 @@
+# Sandbox fixture
+
+Demonstrates the fenced code block syntax that `remarkSandbox` transforms into
+`<Sandbox>` elements.
+
+```sandbox vanilla-ts
+import { createGitHubClient } from "@theholocron/github-client";
+
+const client = createGitHubClient({ token: process.env.GITHUB_TOKEN });
+console.log(client);
+```
+
+```sandbox react-ts
+export default function App() {
+  return <h1>Hello</h1>;
+}
+```

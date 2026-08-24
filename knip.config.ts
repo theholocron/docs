@@ -20,10 +20,7 @@ const config: KnipConfig = {
 		},
 		"packages/components-doc": {
 			entry: ["src/**/*.test.ts"],
-			project: ["src/**/*.ts", "src/**/*.astro", "*.ts"],
-			// disable Astro plugin to suppress the proactive .mdx hint — .astro files
-			// are tracked explicitly above; there are no .mdx files in this package
-			astro: false,
+			project: ["src/**/*.ts", "src/**/*.astro", "src/**/*.mdx", "*.ts"],
 		},
 	},
 	ignoreDependencies: [
