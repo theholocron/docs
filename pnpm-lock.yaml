@@ -7,14 +7,14 @@ settings:
 catalogs:
   configs:
     '@theholocron/astro-config':
-      specifier: ^7.22.2
-      version: 7.22.2
+      specifier: ^7.24.0
+      version: 7.24.0
     '@theholocron/commitlint-config':
       specifier: ^7.22.0
       version: 7.22.2
     '@theholocron/eslint-config':
-      specifier: ^7.23.1
-      version: 7.23.1
+      specifier: ^7.24.1
+      version: 7.24.1
     '@theholocron/holocron-config':
       specifier: ^7.22.0
       version: 7.22.2
@@ -153,7 +153,7 @@ importers:
         version: 12.0.9(semantic-release@25.0.9(typescript@5.9.3))
       '@theholocron/astro-config':
         specifier: catalog:configs
-        version: 7.22.2(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
+        version: 7.24.0(@types/node@26.2.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)
       '@theholocron/cli':
         specifier: catalog:holocron
         version: 3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
@@ -165,7 +165,7 @@ importers:
         version: 1.4.5(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.23.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 7.24.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/holocron-config':
         specifier: catalog:configs
         version: 7.22.2(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10))
@@ -220,6 +220,12 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.9.6
+      react:
+        specifier: ^19.0.0
+        version: 19.2.8
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.2.8(react@19.2.8)
       semantic-release:
         specifier: 'catalog:'
         version: 25.0.9(typescript@5.9.3)
@@ -268,7 +274,7 @@ importers:
         version: 0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.20.1)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3)
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.23.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 7.24.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/prettier-config':
         specifier: catalog:configs
         version: 7.19.1(prettier@3.9.6)
@@ -322,7 +328,7 @@ importers:
         version: 2.0.1(rollup@4.62.4)
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.23.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 7.24.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/prettier-config':
         specifier: catalog:configs
         version: 7.19.1(prettier@3.9.6)
@@ -2512,11 +2518,13 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@theholocron/astro-config@7.22.2':
-    resolution: {integrity: sha512-cU7nZqBIKZteVB3qBJ0hdSAsKv5EWN7/hreM4/3AiEevq4SDXCYriVXiGQ+MVHoTSLtZk3b4PFE2jEf+zuxg+g==}
+  '@theholocron/astro-config@7.24.0':
+    resolution: {integrity: sha512-s/uW8AUVxLA1lZFURA9IPcdUdQmsugWWUwr9ZK6gJzGbwJ9+0wSd58dmaYlM5Wn5Kv0/jyyN2uQTksjLmkntFA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       astro: '>=5.0.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   '@theholocron/cli@3.29.12':
     resolution: {integrity: sha512-znpLNLOrfViyZNcxhr8tbo82kUXYDlOoG0GgLJezmFzcw88NA8fotNjVTydSyZhG0z8roShGHFmc3EPBdC1D8A==}
@@ -2536,8 +2544,8 @@ packages:
       '@astrojs/starlight': '>=0.30.0'
       astro: '>=5.0.0'
 
-  '@theholocron/eslint-config@7.23.1':
-    resolution: {integrity: sha512-TYbnFZnR0QT8R09is8swWkYOEcGAC+SrrBuEjAw1wtpBgjJ+3/I7sa5Q+nmTUx6Li/ew0dBlMradMAuxbH3wbA==}
+  '@theholocron/eslint-config@7.24.1':
+    resolution: {integrity: sha512-ilgPUUrgUztE8zOu6p6U6hvz2wMjXtxitPFxMacCgOGJXYqgZvsGIhUjYaHVORr5+f8QdJiv7PxABcRam4HK/w==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@eslint/js': ^10
@@ -7616,6 +7624,29 @@ snapshots:
       - tsx
       - yaml
 
+  '@astrojs/react@4.4.2(@types/node@26.2.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)':
+    dependencies:
+      '@types/react': 19.2.18
+      '@types/react-dom': 19.2.4(@types/react@19.2.18)
+      '@vitejs/plugin-react': 4.7.0(vite@6.4.3(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      ultrahtml: 1.7.0
+      vite: 6.4.3(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
+    transitivePeerDependencies:
+      - '@types/node'
+      - jiti
+      - less
+      - lightningcss
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - yaml
+
   '@astrojs/sitemap@3.7.3':
     dependencies:
       sitemap: 9.0.1
@@ -9474,9 +9505,27 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@theholocron/astro-config@7.22.2(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))':
+  '@theholocron/astro-config@7.24.0(@types/node@26.2.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)':
     dependencies:
+      '@astrojs/react': 4.4.2(@types/node@26.2.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)
       astro: 7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+    transitivePeerDependencies:
+      - '@types/node'
+      - '@types/react'
+      - '@types/react-dom'
+      - jiti
+      - less
+      - lightningcss
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - yaml
 
   '@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)':
     dependencies:
@@ -9507,7 +9556,7 @@ snapshots:
       astro: 7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
       gray-matter: 4.0.3
 
-  '@theholocron/eslint-config@7.23.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))':
+  '@theholocron/eslint-config@7.24.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))':
     dependencies:
       '@eslint/compat': 2.1.0(eslint@10.8.1(jiti@2.7.0))
       '@eslint/js': 10.0.1(eslint@10.8.1(jiti@2.7.0))
@@ -9825,6 +9874,18 @@ snapshots:
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
       vite: 6.4.3(@types/node@22.20.1)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.12)(yaml@2.9.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vitejs/plugin-react@4.7.0(vite@6.4.3(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))':
+    dependencies:
+      '@babel/core': 7.29.7
+      '@babel/plugin-transform-react-jsx-self': 7.29.7(@babel/core@7.29.7)
+      '@babel/plugin-transform-react-jsx-source': 7.29.7(@babel/core@7.29.7)
+      '@rolldown/pluginutils': 1.0.0-beta.27
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.17.0
+      vite: 6.4.3(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -15032,6 +15093,21 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.7.0
       lightningcss: 1.33.0
+      tsx: 4.23.12
+      yaml: 2.9.0
+
+  vite@6.4.3(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0):
+    dependencies:
+      esbuild: 0.25.12
+      fdir: 6.5.0(picomatch@4.0.5)
+      picomatch: 4.0.5
+      postcss: 8.5.26
+      rollup: 4.62.4
+      tinyglobby: 0.2.17
+    optionalDependencies:
+      '@types/node': 26.2.0
+      fsevents: 2.3.3
+      jiti: 2.7.0
       tsx: 4.23.12
       yaml: 2.9.0
 
