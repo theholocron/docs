@@ -1,0 +1,31 @@
+---
+import {
+	getClients,
+	getConfigs,
+	getDocs,
+	getPlugins,
+	getSkills,
+	getThemes,
+	getUtils,
+} from "@theholocron/registry-doc";
+import PackageGrid from "../package-grid/package-grid.astro";
+import type { RepoIndexProps } from "./types.ts";
+
+type Props = RepoIndexProps;
+
+const { type } = Astro.props;
+
+const registryMap = {
+	clients: { packages: getClients(), gridType: "clients" as const },
+	configs: { packages: getConfigs(), gridType: "clients" as const },
+	docs: { packages: getDocs(), gridType: "clients" as const },
+	plugins: { packages: getPlugins(), gridType: "plugins" as const },
+	skills: { packages: getSkills(), gridType: "clients" as const },
+	themes: { packages: getThemes(), gridType: "clients" as const },
+	utils: { packages: getUtils(), gridType: "clients" as const },
+};
+
+const { packages, gridType } = registryMap[type];
+---
+
+<PackageGrid packages={packages} type={gridType} />
