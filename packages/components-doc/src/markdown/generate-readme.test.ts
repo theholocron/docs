@@ -160,6 +160,15 @@ describe("generateReadme", () => {
 			expect(releases).toContain("https://docs.theholocron.dev/clients/releases");
 		});
 
+		it("strips a trailing slash from homepage before appending /releases", () => {
+			const { releases } = generateReadme({
+				...baseConfig,
+				homepage: "https://docs.theholocron.dev/clients/",
+			});
+			expect(releases).toContain("https://docs.theholocron.dev/clients/releases");
+			expect(releases).not.toContain("clients//releases");
+		});
+
 		it("links to CHANGELOG.md", () => {
 			const { releases } = generateReadme(baseConfig);
 			expect(releases).toContain("[CHANGELOG.md](./CHANGELOG.md)");
