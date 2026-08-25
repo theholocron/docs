@@ -40,7 +40,3 @@ pnpm lint          # lint all packages
 Releases are automated via [semantic-release](https://semantic-release.gitbook.io) on push to `main`. All packages are versioned and published in lockstep. See [CHANGELOG.md](CHANGELOG.md) for the release history.
 
 <!-- /holocron:releases -->
-
-## Documentation
-
-Check out [The Holocron Archive](https://docs.theholocron.dev/docs/) for more information.
