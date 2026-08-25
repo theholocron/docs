@@ -30,6 +30,7 @@ export default defineConfig({
 		{ name: "audit", with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		"sync",
+		"post-release",
 		{ name: "deploy", with: { docs: true } },
 	],
 	providers: {

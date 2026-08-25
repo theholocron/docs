@@ -112,7 +112,7 @@ jobs:
 Thin caller in each repo:
 
 ```yaml
-# .github/workflows/sync-on-change.yml
+# .github/workflows/sync.yml
 on:
   push:
     branches: [main]
@@ -120,10 +120,18 @@ on:
       - holocron.config.ts
       - package.json
       - pnpm-workspace.yaml
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: Sync steps to run (default: all)
+        type: string
+        required: false
 
 jobs:
   sync:
     uses: theholocron/.github/.github/workflows/sync.yml@main
+    with:
+      steps: ${{ inputs.steps }}
     secrets: inherit
 ```
 
@@ -136,20 +144,30 @@ jobs:
 
 When `docs` releases a new version of `registry-doc`, packages tables in all consuming repo READMEs may be stale. Options:
 
-- **A.** `registry-doc` publish triggers a `workflow_dispatch` across all consuming repos.
-- **B.** Each repo's thin caller also watches for Dependabot PRs that bump `registry-doc` — runs sync on merge.
+- **A.** `registry-doc` publish triggers a `workflow_dispatch` across all consuming repos — but docs shouldn't maintain a consumer list.
+- **A′ (chosen).** `registry-doc` publish triggers a single dispatch to `theholocron/.github`, which discovers consumers dynamically via the GitHub API (any repo that has `.github/workflows/sync.yml`) and fans out.
+- **B.** Each repo's thin caller watches for Dependabot PRs that bump `registry-doc` — runs sync on merge. Already works via `pnpm-workspace.yaml` path watch (confirmed: Dependabot updates catalog entries).
 - **C.** Manual — operators run `holocron sync readme` after a registry-doc release.
 
-Start with **C** (simplest), plan for **B**.
+**5.5 implements A′:**
+
+1. `sync-broadcast.yml` in `theholocron/.github` — `workflow_dispatch`, queries API for repos with `sync.yml`, dispatches to each.
+2. `post-release.yml` in `docs/.github/workflows/` — fires on `release: published`, dispatches `sync-broadcast.yml` with `steps=readme`.
+
+```
+docs release → post-release.yml → sync-broadcast.yml in .github
+                                  → gh api /orgs/theholocron/repos
+                                  → dispatch sync.yml to each match
+```
 
 ---
 
 ## Tickets
 
-| #   | Repo                  | Work                                                                                                    |
-| --- | --------------------- | ------------------------------------------------------------------------------------------------------- |
-| 5.1 | `holocron`            | Add `readme` step to `runSync` / `SYNC_STEPS`, delegating to `runSyncReadme`                            |
-| 5.2 | `holocron`            | Add `--steps` docs and update `sync` command help text                                                  |
-| 5.3 | `theholocron/.github` | New reusable `sync.yml` workflow                                                                        |
-| 5.4 | all repos             | Add `sync-on-change.yml` thin caller watching config/package/workspace files                            |
-| 5.5 | `holocron`            | `sync-workflow` step: thin caller generation (replaces manual `sync-workflow-templates` flow) — stretch |
+| #   | Repo                  | Work                                                                                   |
+| --- | --------------------- | -------------------------------------------------------------------------------------- |
+| 5.1 | `holocron`            | Add `readme` step to `runSync` / `SYNC_STEPS`, delegating to `runSyncReadme`           |
+| 5.2 | `holocron`            | Add `--steps` docs and update `sync` command help text                                 |
+| 5.3 | `theholocron/.github` | New reusable `sync.yml` workflow + `auto-commit` composite action                      |
+| 5.4 | all repos             | Add `sync` thin caller + add `sync` to every `holocron.config.ts`                      |
+| 5.5 | `holocron` + `docs`   | `sync-broadcast.yml` template (fan-out via API discovery) + `post-release.yml` in docs |
