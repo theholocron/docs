@@ -52,5 +52,6 @@ function generateDevelopment(scripts: Record<string, string>): string {
 }
 
 function generateReleases(homepage: string): string {
-	return `Automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/).\nSee the [releases page](${homepage}/releases) and [CHANGELOG.md](./CHANGELOG.md).`;
+	const base = homepage.replace(/\/$/, "");
+	return `Automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/).\nSee the [releases page](${base}/releases) and [CHANGELOG.md](./CHANGELOG.md).`;
 }
