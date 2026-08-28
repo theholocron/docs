@@ -46,5 +46,5 @@ catalogs:
     '@theholocron/vitest-config': ^7.19.1
 
   holocron:
-    '@theholocron/cli': ^3.29.12
-    '@theholocron/holocron-plugin-github': ^3.29.12
+    '@theholocron/cli': ^3.35.0
+    '@theholocron/holocron-plugin-github': ^3.35.0
