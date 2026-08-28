@@ -37,7 +37,7 @@ catalogs:
     '@theholocron/astro-config': ^7.24.0
     '@theholocron/commitlint-config': ^7.22.0
     '@theholocron/eslint-config': ^7.24.1
-    '@theholocron/holocron-config': ^7.22.0
+    '@theholocron/holocron-config': ^7.26.0
     '@theholocron/lint-staged-config': ^7.22.0
     '@theholocron/prettier-config': ^7.19.1
     '@theholocron/semantic-release-config': ^7.22.0
@@ -46,5 +46,5 @@ catalogs:
     '@theholocron/vitest-config': ^7.19.1
 
   holocron:
-    '@theholocron/cli': ^3.29.12
-    '@theholocron/holocron-plugin-github': ^3.29.12
+    '@theholocron/cli': ^3.36.0
+    '@theholocron/holocron-plugin-github': ^3.36.0

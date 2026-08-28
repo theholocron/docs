@@ -1,22 +1,23 @@
 import { defineConfig } from "@theholocron/cli";
-import { node } from "@theholocron/holocron-config";
+import { nodeDocs } from "@theholocron/holocron-config";
 
-const { repo, workflows, providers } = node();
+const { repo, workflows, providers, org, domain, docs } = nodeDocs();
 export default defineConfig({
 	description: "Documentation infrastructure.",
 	homepage: "https://docs.theholocron.dev/docs/",
+	org,
+	domain,
+	docs,
 	repo: {
 		name: "theholocron/docs",
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "documentation", "registry", "starlight", "typescript"],
 		...repo,
-		protection: "strict",
 		requiredChecks: [
+			...repo.requiredChecks,
 			"audit / Knip",
 			"audit / Audit the bundle size",
-			"codecov/patch",
 			"codecov/patch/registry-doc",
-			"codecov/project",
 		],
 		properties: {
 			...repo.properties,
@@ -31,13 +32,8 @@ export default defineConfig({
 		{ name: "release", with: { "run-build": true } },
 		"sync",
 		"post-release",
-		{ name: "deploy", with: { docs: true } },
 	],
-	providers: {
-		...providers,
-		secrets: "github",
-	},
-	docs: { build: "workflow", https: true },
+	providers: { ...providers, secrets: "github" },
 	agent: "claude",
 	skills: ["git-safety", "pr-workflow", "commit-standards", "security-review"],
 });
