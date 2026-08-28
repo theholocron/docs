@@ -42,6 +42,8 @@ const config: KnipConfig = {
 		// used in docs/content/dev.mdx — Knip cannot follow imports from compiled .mdx content files
 		"@theholocron/components-doc",
 		"@theholocron/registry-doc",
+		// Astro integration registered in root astro.config.ts — not statically imported in packages/components-doc
+		"@astrojs/react",
 	],
 	ignoreExportsUsedInFile: true,
 };
