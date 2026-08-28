@@ -5,6 +5,8 @@ const { repo, workflows, providers } = node();
 export default defineConfig({
 	description: "Documentation infrastructure.",
 	homepage: "https://docs.theholocron.dev/docs/",
+	org: "theholocron",
+	domain: "theholocron.dev",
 	repo: {
 		name: "theholocron/docs",
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
@@ -31,14 +33,13 @@ export default defineConfig({
 		{ name: "release", with: { "run-build": true } },
 		"sync",
 		"post-release",
-		{
-			name: "deploy",
-			with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } },
-		},
+		{ name: "deploy", with: { docs: true, preview: true } },
 	],
 	providers: {
 		...providers,
 		secrets: "github",
+		deployment: "cloudflare",
+		dns: "cloudflare",
 	},
 	docs: { build: "workflow", https: true },
 	agent: "claude",
