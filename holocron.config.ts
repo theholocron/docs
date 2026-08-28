@@ -31,7 +31,10 @@ export default defineConfig({
 		{ name: "release", with: { "run-build": true } },
 		"sync",
 		"post-release",
-		{ name: "deploy", with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } } },
+		{
+			name: "deploy",
+			with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } },
+		},
 	],
 	providers: {
 		...providers,
