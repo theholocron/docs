@@ -16,8 +16,8 @@ catalogs:
       specifier: ^7.24.1
       version: 7.24.1
     '@theholocron/holocron-config':
-      specifier: ^7.22.0
-      version: 7.22.2
+      specifier: ^7.26.0
+      version: 7.26.0
     '@theholocron/lint-staged-config':
       specifier: ^7.22.0
       version: 7.22.2
@@ -168,7 +168,7 @@ importers:
         version: 7.24.1(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.67.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/holocron-config':
         specifier: catalog:configs
-        version: 7.22.2(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10))
+        version: 7.26.0(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10))
       '@theholocron/holocron-plugin-github':
         specifier: catalog:holocron
         version: 3.29.12(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10))(@theholocron/github-client@1.10.3(vitest@4.1.10))
@@ -2704,8 +2704,8 @@ packages:
     resolution: {integrity: sha512-oC0DkFc6P79VkLnO+Umqe0CnGSBQhddnp90j9sGJIdLUXgCl3hXjj1ZB7RY6Z7+Jmfi+1t/zTutiGJoXvcG+6g==}
     engines: {node: '>=22.0.0'}
 
-  '@theholocron/holocron-config@7.22.2':
-    resolution: {integrity: sha512-ZvN3AB4fmTVeP+zghSIX5e/G9QoVBN77tt/tQlPooGSr/ZWR5vjVouA0gtBa73IrH173c2n87UvpxZa7XGNhxg==}
+  '@theholocron/holocron-config@7.26.0':
+    resolution: {integrity: sha512-nGYZ9aIvvTcEG37iGvOZ9tagQOvaETD/KAuoP/d1SRSOAjnnk3mGzgLyMzmpy9fNH02CzcAVMFIdOzh6InE/IA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@theholocron/cli': '>=2.0.0-alpha.1'
@@ -9767,7 +9767,7 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@theholocron/holocron-config@7.22.2(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10))':
+  '@theholocron/holocron-config@7.26.0(@theholocron/cli@3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10))':
     dependencies:
       '@theholocron/cli': 3.29.12(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(vitest@4.1.10)
 
