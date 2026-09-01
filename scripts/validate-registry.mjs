@@ -10,12 +10,10 @@
  * Usage: node scripts/validate-registry.mjs
  */
 
-import { createRequire } from "node:module";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { join, dirname } from "node:path";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const require = createRequire(join(root, "package.json"));
 
 // Load from the local workspace build so CI tests against the current source.
 const pkgPath = join(root, "packages/registry-doc/dist/index.mjs");
