@@ -10,13 +10,22 @@
  * Usage: node scripts/validate-registry.mjs
  */
 
+import { execFileSync } from "node:child_process";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-
-// Load from the local workspace build so CI tests against the current source.
 const pkgPath = join(root, "packages/registry-doc/dist/index.mjs");
+
+// Build registry-doc if dist is missing (fresh CI checkout has no dist/).
+if (!existsSync(pkgPath)) {
+	execFileSync("pnpm", ["--filter", "@theholocron/registry-doc", "build"], {
+		cwd: root,
+		stdio: "inherit",
+	});
+}
+
 const { getRegistry } = await import(pkgPath);
 
 const REQUIRED_FIELDS = ["slug", "package", "docsUrl", "npmUrl", "githubUrl"];
