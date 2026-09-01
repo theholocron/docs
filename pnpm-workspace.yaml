@@ -48,4 +48,3 @@ catalogs:
   holocron:
     '@theholocron/cli': ^3.36.0
     '@theholocron/holocron-plugin-github': ^3.36.0
-
