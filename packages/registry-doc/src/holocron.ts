@@ -18,6 +18,13 @@ export const cli: LinksRegistry = {
 	cli: makeHolocronEntry("cli", "cli"),
 };
 
+export const tools: LinksRegistry = {
+	"rollup-plugin-transform-template": makeHolocronEntry(
+		"rollup-plugin-transform-template",
+		"rollup-plugin-transform-template"
+	),
+};
+
 export const plugins: LinksRegistry = {
 	"holocron-plugin-1password": makeHolocronEntry("holocron-plugin-1password", "plugins/1password"),
 	"holocron-plugin-clerk": makeHolocronEntry("holocron-plugin-clerk", "plugins/clerk"),

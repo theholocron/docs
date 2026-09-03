@@ -2,7 +2,7 @@ import { clients } from "./clients.js";
 import { configs } from "./configs.js";
 import { DOCS_BASE, GITHUB_BASE, ORG, SCOPE } from "./constants.js";
 import { docs } from "./docs.js";
-import { cli, plugins } from "./holocron.js";
+import { cli, plugins, tools } from "./holocron.js";
 import { skills } from "./skills.js";
 import { templates } from "./templates.js";
 import { themes } from "./themes.js";
@@ -36,12 +36,15 @@ export const getThemes = () => themes;
 
 export const getUtils = () => utils;
 
-export const getHolocron = () => ({ ...cli, ...plugins });
+export const getTools = () => tools;
+
+export const getHolocron = () => ({ ...cli, ...plugins, ...tools });
 
 export const getRegistry = () => ({
 	...clients,
 	...cli,
 	...plugins,
+	...tools,
 	...configs,
 	...utils,
 	...themes,
