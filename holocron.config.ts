@@ -29,9 +29,8 @@ export default defineConfig({
 	workflows: [
 		...workflows,
 		{ name: "audit", with: { "run-knip": true } },
-		{ name: "release", with: { "run-build": true } },
+		{ name: "release", with: { "run-build": true, "post-release": true } },
 		"sync",
-		"post-release",
 	],
 	providers: { ...providers, secrets: "github" },
 	agent: "claude",

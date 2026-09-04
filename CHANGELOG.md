@@ -2,7 +2,7 @@
 
 ### Features
 
-* ✨ add rollup-plugin-transform-template to registry ([#35](https://github.com/theholocron/docs/issues/35)) ([7614b7a](https://github.com/theholocron/docs/commit/7614b7a83928514c8e885dad07b8590eefa9e804))
+- ✨ add rollup-plugin-transform-template to registry ([#35](https://github.com/theholocron/docs/issues/35)) ([7614b7a](https://github.com/theholocron/docs/commit/7614b7a83928514c8e885dad07b8590eefa9e804))
 
 ## [1.7.0](https://github.com/theholocron/docs/compare/v1.6.1...v1.7.0) (2026-09-01)
 
