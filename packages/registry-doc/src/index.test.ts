@@ -105,8 +105,8 @@ describe("getPlugins", () => {
 });
 
 describe("getHolocron", () => {
-	it("merges cli, plugins, and tools into 16 entries", () => {
-		expect(Object.keys(getHolocron())).toHaveLength(16);
+	it("merges cli, plugins, and tools into 17 entries", () => {
+		expect(Object.keys(getHolocron())).toHaveLength(17);
 	});
 
 	it("contains cli, plugin, and tool entries", () => {
@@ -114,18 +114,20 @@ describe("getHolocron", () => {
 		expect(h["cli"]).toBeDefined();
 		expect(h["holocron-plugin-github"]).toBeDefined();
 		expect(h["rollup-plugin-transform-template"]).toBeDefined();
+		expect(h["logger"]).toBeDefined();
 	});
 });
 
 describe("getTools", () => {
-	it("returns 1 tool entry", () => {
-		expect(Object.keys(getTools())).toHaveLength(1);
+	it("returns 2 tool entries", () => {
+		expect(Object.keys(getTools())).toHaveLength(2);
 	});
 
 	it("derives package name from scope and slug", () => {
 		expect(getTools()["rollup-plugin-transform-template"]?.package).toBe(
 			"@theholocron/rollup-plugin-transform-template"
 		);
+		expect(getTools()["logger"]?.package).toBe("@theholocron/logger");
 	});
 
 	it("points githubUrl to the holocron repo", () => {
@@ -232,9 +234,9 @@ describe("getTemplates", () => {
 });
 
 describe("getRegistry", () => {
-	it("merges all registries into 64 entries", () => {
+	it("merges all registries into 65 entries", () => {
 		const reg = getRegistry();
-		expect(Object.keys(reg)).toHaveLength(64);
+		expect(Object.keys(reg)).toHaveLength(65);
 	});
 
 	it("contains entries from every registry", () => {
