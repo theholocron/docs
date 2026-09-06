@@ -19,6 +19,7 @@ export const cli: LinksRegistry = {
 };
 
 export const tools: LinksRegistry = {
+	logger: makeHolocronEntry("logger", "logging"),
 	"rollup-plugin-transform-template": makeHolocronEntry(
 		"rollup-plugin-transform-template",
 		"rollup-plugin-transform-template"
