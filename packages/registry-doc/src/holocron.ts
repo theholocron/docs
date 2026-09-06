@@ -28,6 +28,7 @@ export const tools: LinksRegistry = {
 
 export const plugins: LinksRegistry = {
 	"holocron-plugin-1password": makeHolocronEntry("holocron-plugin-1password", "plugins/1password"),
+	"holocron-plugin-axiom": makeHolocronEntry("holocron-plugin-axiom", "plugins/axiom"),
 	"holocron-plugin-clerk": makeHolocronEntry("holocron-plugin-clerk", "plugins/clerk"),
 	"holocron-plugin-cloudflare": makeHolocronEntry("holocron-plugin-cloudflare", "plugins/cloudflare"),
 	"holocron-plugin-discord": makeHolocronEntry("holocron-plugin-discord", "plugins/discord"),
