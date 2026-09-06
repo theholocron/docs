@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/theholocron/docs/compare/v1.8.1...v1.9.0) (2026-09-06)
+
+### Features
+
+* **registry-doc:** ✨ register @theholocron/logger ([#38](https://github.com/theholocron/docs/issues/38)) ([2ea7045](https://github.com/theholocron/docs/commit/2ea70450c4f7b58818daaf68de34b2cdb8503b8a)), references [holocron#522](https://github.com/holocron/issues/522) [theholocron/holocron#522](https://github.com/theholocron/holocron/issues/522)
+
 ## [1.8.1](https://github.com/theholocron/docs/compare/v1.8.0...v1.8.1) (2026-09-06)
 
 ### Chores
