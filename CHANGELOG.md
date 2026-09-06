@@ -2,8 +2,8 @@
 
 ### Chores
 
-* 🗑️ remove orphaned workflow files ([#36](https://github.com/theholocron/docs/issues/36)) ([17aa317](https://github.com/theholocron/docs/commit/17aa31783918432a4e58a546b22d1bf4730b49c9))
-* **deps:** bump the all-dependencies group across 1 directory with 11 updates ([#37](https://github.com/theholocron/docs/issues/37)) ([b60704f](https://github.com/theholocron/docs/commit/b60704fdac8e58332abe1e45c22065298ada8c1a))
+- 🗑️ remove orphaned workflow files ([#36](https://github.com/theholocron/docs/issues/36)) ([17aa317](https://github.com/theholocron/docs/commit/17aa31783918432a4e58a546b22d1bf4730b49c9))
+- **deps:** bump the all-dependencies group across 1 directory with 11 updates ([#37](https://github.com/theholocron/docs/issues/37)) ([b60704f](https://github.com/theholocron/docs/commit/b60704fdac8e58332abe1e45c22065298ada8c1a))
 
 ## [1.8.0](https://github.com/theholocron/docs/compare/v1.7.0...v1.8.0) (2026-09-03)
 
