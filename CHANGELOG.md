@@ -2,7 +2,7 @@
 
 ### Features
 
-* **registry-doc:** ✨ register @theholocron/holocron-plugin-axiom ([#39](https://github.com/theholocron/docs/issues/39)) ([f9d469a](https://github.com/theholocron/docs/commit/f9d469ab5d839978dce8933a45d8112234fa0172)), closes [holocron#525](https://github.com/holocron/issues/525), references [theholocron/holocron#525](https://github.com/theholocron/holocron/issues/525)
+- **registry-doc:** ✨ register @theholocron/holocron-plugin-axiom ([#39](https://github.com/theholocron/docs/issues/39)) ([f9d469a](https://github.com/theholocron/docs/commit/f9d469ab5d839978dce8933a45d8112234fa0172)), closes [holocron#525](https://github.com/holocron/issues/525), references [theholocron/holocron#525](https://github.com/theholocron/holocron/issues/525)
 
 ## [1.9.0](https://github.com/theholocron/docs/compare/v1.8.1...v1.9.0) (2026-09-06)
 
