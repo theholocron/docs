@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/theholocron/docs/compare/v1.10.0...v1.11.0) (2026-09-08)
+
+### Features
+
+* **registry-doc:** ✨ register @theholocron/datapad ([#40](https://github.com/theholocron/docs/issues/40)) ([403093f](https://github.com/theholocron/docs/commit/403093f0fac13d986412c8de8fb3ee7fb4553ec2))
+
 ## [1.10.0](https://github.com/theholocron/docs/compare/v1.9.0...v1.10.0) (2026-09-06)
 
 ### Features
