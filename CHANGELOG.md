@@ -1,3 +1,9 @@
+## [1.12.0](https://github.com/theholocron/docs/compare/v1.11.0...v1.12.0) (2026-09-08)
+
+### Features
+
+* **registry-doc:** ✨ register @theholocron/astromech ([#41](https://github.com/theholocron/docs/issues/41)) ([8c4f4f1](https://github.com/theholocron/docs/commit/8c4f4f11b15b8f45fb2d980db5b2bcdd152c32ff)), references [theholocron/holocron#583](https://github.com/theholocron/holocron/issues/583)
+
 ## [1.11.0](https://github.com/theholocron/docs/compare/v1.10.0...v1.11.0) (2026-09-08)
 
 ### Features
