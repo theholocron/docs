@@ -3,6 +3,7 @@ import { configs } from "./configs.js";
 import { DOCS_BASE, GITHUB_BASE, ORG, SCOPE } from "./constants.js";
 import { docs } from "./docs.js";
 import { cli, plugins, tools } from "./holocron.js";
+import { observability } from "./observability.js";
 import { skills } from "./skills.js";
 import { templates } from "./templates.js";
 import { themes } from "./themes.js";
@@ -38,6 +39,8 @@ export const getUtils = () => utils;
 
 export const getTools = () => tools;
 
+export const getObservability = () => observability;
+
 export const getHolocron = () => ({ ...cli, ...plugins, ...tools });
 
 export const getRegistry = () => ({
@@ -45,6 +48,7 @@ export const getRegistry = () => ({
 	...cli,
 	...plugins,
 	...tools,
+	...observability,
 	...configs,
 	...utils,
 	...themes,

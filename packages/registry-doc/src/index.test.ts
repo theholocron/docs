@@ -8,6 +8,7 @@ import {
 	getDocsBaseUrl,
 	getGitHubBaseUrl,
 	getHolocron,
+	getObservability,
 	getOrg,
 	getPackage,
 	getPlugins,
@@ -105,8 +106,8 @@ describe("getPlugins", () => {
 });
 
 describe("getHolocron", () => {
-	it("merges cli, plugins, and tools into 20 entries", () => {
-		expect(Object.keys(getHolocron())).toHaveLength(20);
+	it("merges cli, plugins, and tools into 19 entries", () => {
+		expect(Object.keys(getHolocron())).toHaveLength(19);
 	});
 
 	it("contains cli, plugin, and tool entries", () => {
@@ -114,22 +115,20 @@ describe("getHolocron", () => {
 		expect(h["cli"]).toBeDefined();
 		expect(h["holocron-plugin-github"]).toBeDefined();
 		expect(h["rollup-plugin-transform-template"]).toBeDefined();
-		expect(h["logger"]).toBeDefined();
 		expect(h["datapad"]).toBeDefined();
 		expect(h["astromech"]).toBeDefined();
 	});
 });
 
 describe("getTools", () => {
-	it("returns 4 tool entries", () => {
-		expect(Object.keys(getTools())).toHaveLength(4);
+	it("returns 3 tool entries", () => {
+		expect(Object.keys(getTools())).toHaveLength(3);
 	});
 
 	it("derives package name from scope and slug", () => {
 		expect(getTools()["rollup-plugin-transform-template"]?.package).toBe(
 			"@theholocron/rollup-plugin-transform-template"
 		);
-		expect(getTools()["logger"]?.package).toBe("@theholocron/logger");
 		expect(getTools()["datapad"]?.package).toBe("@theholocron/datapad");
 		expect(getTools()["astromech"]?.package).toBe("@theholocron/astromech");
 	});
@@ -138,6 +137,20 @@ describe("getTools", () => {
 		expect(getTools()["rollup-plugin-transform-template"]?.githubUrl).toBe(
 			"https://github.com/theholocron/holocron"
 		);
+	});
+});
+
+describe("getObservability", () => {
+	it("returns the single observability entry", () => {
+		expect(Object.keys(getObservability())).toHaveLength(1);
+	});
+
+	it("derives package name, docs URL, and githubUrl from its own repo", () => {
+		const o = getObservability()["observability"];
+		expect(o?.package).toBe("@theholocron/observability");
+		expect(o?.docsUrl).toBe("https://docs.theholocron.dev/observability/");
+		expect(o?.githubUrl).toBe("https://github.com/theholocron/observability");
+		expect(o?.npmUrl).toBe("https://www.npmjs.com/package/@theholocron/observability");
 	});
 });
 
