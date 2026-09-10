@@ -7,35 +7,35 @@ settings:
 catalogs:
   configs:
     '@theholocron/astro-config':
-      specifier: ^7.29.0
-      version: 7.32.2
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/commitlint-config':
-      specifier: ^7.29.0
-      version: 7.32.2
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/eslint-config':
-      specifier: ^7.24.1
-      version: 7.24.1
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/holocron-config':
-      specifier: ^7.29.0
-      version: 7.32.2
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/lint-staged-config':
-      specifier: ^7.29.0
-      version: 7.32.2
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/prettier-config':
-      specifier: ^7.19.1
-      version: 7.19.1
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/semantic-release-config':
-      specifier: ^7.29.0
-      version: 7.32.2
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/tsconfig':
-      specifier: ^7.19.1
-      version: 7.19.1
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/tsdown-config':
-      specifier: ^7.19.1
-      version: 7.19.1
+      specifier: ^8.2.0
+      version: 8.2.0
     '@theholocron/vitest-config':
-      specifier: ^7.19.1
-      version: 7.19.1
+      specifier: ^8.2.0
+      version: 8.2.0
   default:
     '@astrojs/starlight':
       specifier: ^0.41.5
@@ -117,11 +117,11 @@ catalogs:
       version: 4.1.10
   holocron:
     '@theholocron/cli':
-      specifier: ^3.45.0
-      version: 3.47.0
+      specifier: ^4.15.0
+      version: 4.15.0
     '@theholocron/holocron-plugin-github':
-      specifier: ^3.45.0
-      version: 3.47.0
+      specifier: ^4.15.0
+      version: 4.15.0
 
 overrides:
   '@commitlint/config-conventional>conventional-changelog-conventionalcommits': '7'
@@ -154,40 +154,40 @@ importers:
         version: 12.0.9(semantic-release@25.0.9(typescript@5.9.3))
       '@theholocron/astro-config':
         specifier: catalog:configs
-        version: 7.32.2(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.33.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)
+        version: 8.2.0(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.33.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)
       '@theholocron/cli':
         specifier: catalog:holocron
-        version: 3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
+        version: 4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
       '@theholocron/commitlint-config':
         specifier: catalog:configs
-        version: 7.32.2(@commitlint/cli@21.2.2(@types/node@26.3.0)(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.2)
+        version: 8.2.0(@commitlint/cli@21.2.2(@types/node@26.3.0)(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.2)
       '@theholocron/docs-theme':
         specifier: 'catalog:'
         version: 1.9.3(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.24.1(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 8.2.0(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/holocron-config':
         specifier: catalog:configs
-        version: 7.32.2(@theholocron/cli@3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))
+        version: 8.2.0(@theholocron/cli@4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))
       '@theholocron/holocron-plugin-github':
         specifier: catalog:holocron
-        version: 3.47.0(@theholocron/cli@3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))(@theholocron/github-client@1.14.2(vitest@4.1.10))
+        version: 4.15.0(@theholocron/cli@4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))(@theholocron/github-client@1.14.2(vitest@4.1.10))
       '@theholocron/lint-staged-config':
         specifier: catalog:configs
-        version: 7.32.2(husky@9.1.7)(lint-staged@17.4.1)(sort-package-json@4.0.0)
+        version: 8.2.0(husky@9.1.7)(lint-staged@17.4.1)(sort-package-json@4.0.0)
       '@theholocron/prettier-config':
         specifier: catalog:configs
-        version: 7.19.1(prettier@3.9.6)
+        version: 8.2.0(prettier@3.9.6)
       '@theholocron/semantic-release-config':
         specifier: catalog:configs
-        version: 7.32.2(@semantic-release/changelog@7.0.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@11.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.4.0)(semantic-release@25.0.9(typescript@5.9.3))
+        version: 8.2.0(@semantic-release/changelog@7.0.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@11.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.4.0)(semantic-release@25.0.9(typescript@5.9.3))
       '@theholocron/skills':
         specifier: ^1.3.2
         version: 1.3.2
       '@theholocron/tsconfig':
         specifier: catalog:configs
-        version: 7.19.1(typescript@5.9.3)
+        version: 8.2.0(typescript@5.9.3)
       alex:
         specifier: ^11.0.1
         version: 11.0.1
@@ -275,19 +275,19 @@ importers:
         version: 0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3)
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.24.1(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 8.2.0(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/prettier-config':
         specifier: catalog:configs
-        version: 7.19.1(prettier@3.9.6)
+        version: 8.2.0(prettier@3.9.6)
       '@theholocron/registry-doc':
         specifier: workspace:*
         version: link:../registry-doc
       '@theholocron/tsconfig':
         specifier: catalog:configs
-        version: 7.19.1(typescript@5.9.3)
+        version: 8.2.0(typescript@5.9.3)
       '@theholocron/tsdown-config':
         specifier: catalog:configs
-        version: 7.19.1(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))
+        version: 8.2.0(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))
       '@types/mdast':
         specifier: ^4.0.4
         version: 4.0.4
@@ -335,19 +335,19 @@ importers:
         version: 2.0.1(rollup@4.63.1)
       '@theholocron/eslint-config':
         specifier: catalog:configs
-        version: 7.24.1(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
+        version: 8.2.0(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/prettier-config':
         specifier: catalog:configs
-        version: 7.19.1(prettier@3.9.6)
+        version: 8.2.0(prettier@3.9.6)
       '@theholocron/tsconfig':
         specifier: catalog:configs
-        version: 7.19.1(typescript@5.9.3)
+        version: 8.2.0(typescript@5.9.3)
       '@theholocron/tsdown-config':
         specifier: catalog:configs
-        version: 7.19.1(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))
+        version: 8.2.0(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))
       '@theholocron/vitest-config':
         specifier: catalog:configs
-        version: 7.19.1(@vitest/coverage-v8@4.1.10)(vitest@4.1.10)
+        version: 8.2.0(@vitest/coverage-v8@4.1.10)(vitest@4.1.10)
       '@types/node':
         specifier: 'catalog:'
         version: 26.3.0
@@ -544,6 +544,14 @@ packages:
 
   '@astrojs/yaml2ts@0.2.4':
     resolution: {integrity: sha512-8oddpOae35pJsXPQXhTkM0ypfKPskVsh2bCxRtbf7e+/Epw2nReakFYpLKjZMEr75CsoF203PMnCocpfz0s69A==}
+
+  '@axiomhq/js@2.0.0':
+    resolution: {integrity: sha512-mhDH0KLFkDko9ytoltgmch2gOiwE6kY6VWhCmTux9lzL9hmjTej68JeQKwq9GGqOY7xwDsya88bNiTnp/zc8+Q==}
+    engines: {node: '>=20'}
+
+  '@axiomhq/pino@2.0.0':
+    resolution: {integrity: sha512-CvadVsFgcAOVuYP0Hkqx9MtG4201xtvC2h+ubgfiJvQzMrMHJdQenDXuyIQS7pZ0kp7rCTUVMvQY0UpswXw5Ew==}
+    engines: {node: '>=20'}
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -1961,6 +1969,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@pinojs/redact@0.4.0':
+    resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -1976,6 +1987,12 @@ packages:
   '@pnpm/npm-conf@3.0.3':
     resolution: {integrity: sha512-//0sR/cow/s4ICQaYoAobOl4aU8cjU6x/V24V7XkKotb9+O+3zySIYp146vpaobYHnxa4pZX8NkV54Z5AwbDKA==}
     engines: {node: '>=12'}
+
+  '@posthog/core@1.52.2':
+    resolution: {integrity: sha512-5j1aLSwuubv2hqymAs3NlzuRAEKauA4zxa50tDkQ0bl6w2mo/1vgiEMfwobNaD8IXI7gRy5jeQ6ZXyTHyyKVhw==}
+
+  '@posthog/types@1.410.1':
+    resolution: {integrity: sha512-DJ0t9Ud5+pCW/m8XT3InyP77Ut5/4biMz6nzF+LWr9BbvDMz5Waej9lk1zZgdeLYv4SSK5HdPW0z1Yl6DbPmXg==}
 
   '@quansync/fs@1.0.0':
     resolution: {integrity: sha512-4TJ3DFtlf1L5LDMaM6CanJ/0lckGNtJcMjQ1NAV6zDmA0tEHKZtxNKin8EgPaVX1YzljbxckyT2tJrpQKAtngQ==}
@@ -2479,21 +2496,25 @@ packages:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
 
-  '@theholocron/astro-config@7.32.2':
-    resolution: {integrity: sha512-b8z8ToopiBb0tcR+l1koF09Z0MnyiUFHhtsEhVV+LpBqsOm0Fr+/3KRJa+WqJZuO7eR/AJrak/UC12GIm+nobA==}
+  '@theholocron/astro-config@8.2.0':
+    resolution: {integrity: sha512-pxkrIHTxusTVDN1sG58B7hPFCD8B1EpOixUqn+lVymT0FBDKcT6BiuvV0idoZtQtXG+OhyZNvkhGrKFtncsrIw==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       astro: '>=5.0.0'
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
 
-  '@theholocron/cli@3.47.0':
-    resolution: {integrity: sha512-2CjuSGoByLWp9PROFu61Cd0VbK5YCQkw5yit9f0uneJ7+HKt1vW5FnC0rsdzc2Uzp1klmvdOwsE37hHYuwdhnQ==}
+  '@theholocron/astromech@4.15.0':
+    resolution: {integrity: sha512-7/d8ls4yHAI0yu1Jq3M4Y+gpFwgN7A8xG9Kic7R9Od1E1pZhk9SmRowpm2U5km7OuyjekWVhGk6LoluunIkoYg==}
+    engines: {node: '>=22'}
+
+  '@theholocron/cli@4.15.0':
+    resolution: {integrity: sha512-onFiB+u9A8Iswz8U+E9MpakMlmnkhJrMdFjI9XujIVrT/cLsxGIYDcUI9LWHiDEytV0GrgvzdhbjEXHCfRTi8Q==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  '@theholocron/commitlint-config@7.32.2':
-    resolution: {integrity: sha512-XObm6kzGicysL7HPWF1qTMT5a70b2oS3Jhr+6U89Ww9YettiG5bvNI8EXErwDiZfYFtwZbrO695Prw45GztDjg==}
+  '@theholocron/commitlint-config@8.2.0':
+    resolution: {integrity: sha512-PN+rrtNf5PSExSo6JWXkR1MNi3qkbh6qTFsyluD7+xTbuwpphIbID5vQn9uhUA9k+3skHlO7hDiD31SduSiOxQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@commitlint/cli': ^21
@@ -2516,6 +2537,10 @@ packages:
       react-dom:
         optional: true
 
+  '@theholocron/datapad@4.15.0':
+    resolution: {integrity: sha512-7ZKPv6YQGPNTuV43i9uVdPnCfxByPjfBN+wzfPP+Qhs+pNq5CeG16LcBKqXBvKsS6EhBOu7AcfT4VTWGlnzMJw==}
+    engines: {node: '>=22'}
+
   '@theholocron/docs-theme@1.9.3':
     resolution: {integrity: sha512-UeFAY1Un0XwmSpkOZ2O5c4YgtHv/a9XstMDH1z94bjaHqg8X/j6W/AxHB7NEMCUM4L+LaA2Pe+z4RzoJ0JrzyQ==}
     engines: {node: '>=22.0.0'}
@@ -2523,8 +2548,14 @@ packages:
       '@astrojs/starlight': '>=0.30.0'
       astro: '>=5.0.0'
 
-  '@theholocron/eslint-config@7.24.1':
-    resolution: {integrity: sha512-ilgPUUrgUztE8zOu6p6U6hvz2wMjXtxitPFxMacCgOGJXYqgZvsGIhUjYaHVORr5+f8QdJiv7PxABcRam4HK/w==}
+  '@theholocron/env-utils@1.7.1':
+    resolution: {integrity: sha512-PS6PnXT2qKK6fEHQmHi1JiWsbR4qfd5Gs6jaBkqFLrp/KrkCRUB4xqaxpyVANLQ7Cl1cmbgdzF3QmiIie0nqdQ==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      dotenv: '>=16'
+
+  '@theholocron/eslint-config@8.2.0':
+    resolution: {integrity: sha512-lJG008xbWrjpTnLq2QDWJvzTmyw5m92SvqIUGYm42WSblQ+W9ImjClJrxOqhWt8f1Jjwm9UfOCublpK/X7NA4Q==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@eslint/js': ^10
@@ -2559,18 +2590,18 @@ packages:
     resolution: {integrity: sha512-8udmZZbNS6lbHm6cMgxgcqjaSfLOaX0huGxwr+sx4RooMBqpqyi98JXWYBbZlf/qGW7jT9QCiFY+VgDP/GGsRQ==}
     engines: {node: '>=22.0.0'}
 
-  '@theholocron/holocron-config@7.32.2':
-    resolution: {integrity: sha512-W1OeF6dEow7aS9l8gcl0viGnN8DVhdnXBI4oHHn5TfR9fh/k+Sq7L8RV7W90xFv+AjIUq4eWufLAVe3OILYqfg==}
+  '@theholocron/holocron-config@8.2.0':
+    resolution: {integrity: sha512-nMvw2FJlKeHA6D+c5L7AkoDQ02PNs9QJ49y9XbOKHZTMd4lXyZCF1J9190dKQ2O/6YerPG+nbNCRy995HRxwTQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
-      '@theholocron/cli': '>=2.0.0-alpha.1'
+      '@theholocron/cli': '>=4.10.0'
 
-  '@theholocron/holocron-plugin-github@3.47.0':
-    resolution: {integrity: sha512-SBA9Lnm339Nraiho/afxzzQK7TaoppGWd2enUXMkza6bo37RfHdPtY5QoSMQunXRT1e60q6EcMNwRs9zgzgIdQ==}
+  '@theholocron/holocron-plugin-github@4.15.0':
+    resolution: {integrity: sha512-ylojTcc8p+lWetQMYeKOlnFysx0TSp/aHr0O14oVjU+hy+AuFt1+ENCmM9/FdWKWdRDI/bvgSm7Ih0BhBjsuqA==}
     engines: {node: '>=22'}
     peerDependencies:
-      '@theholocron/cli': 3.47.0
-      '@theholocron/github-client': ^1.12.0
+      '@theholocron/cli': 4.15.0
+      '@theholocron/github-client': ^1.14.2
 
   '@theholocron/http-client@1.14.2':
     resolution: {integrity: sha512-/E5X+ZQvBJPfvgZ/jpNPT7Z8i5yWbq9DlivrgYoJcPs2RtXmh5m9p5WQGHrR0EXIWV7jfjuuWfh82T7yrkohbg==}
@@ -2581,8 +2612,8 @@ packages:
       vitest:
         optional: true
 
-  '@theholocron/lint-staged-config@7.32.2':
-    resolution: {integrity: sha512-pk3oA31jBPenvFCQvMn531p2aQ7CcGq4gdlH9lycrUzY4+FzEyQTNkxEwjQw4V4Ryo8ObgUQE+tqH9qjvoe1tQ==}
+  '@theholocron/lint-staged-config@8.2.0':
+    resolution: {integrity: sha512-zRvtXPKwWAAjcJrIA0yoDijRbTWiFrFa4yUWOj+6pkKdP5jKCWe0GWya+BUD1T0yYzIpzy1fRFjzq4UuUn7qww==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       husky: ^9
@@ -2592,18 +2623,39 @@ packages:
       sort-package-json:
         optional: true
 
-  '@theholocron/prettier-config@7.19.1':
-    resolution: {integrity: sha512-IU+gxQrmjvLls3P5avBiMCOjI6GBXtCvUx9vsE9cb7g6bmVmlz8zh3mkSBq4JnjwRvYxGM3HIOjzp+ERP5PdQA==}
+  '@theholocron/observability@0.2.0':
+    resolution: {integrity: sha512-GeXqLpMB2FBXWTh/qum/ZvtQ38PJvRF1NRTTSBaTqzBc/FG1eyT/57jbMXUNfHi1KVhMkNM/vQ0Kz+hgr0Y+/w==}
+    engines: {node: '>=22.0.0'}
+    peerDependencies:
+      '@axiomhq/pino': '>=2'
+      '@sentry/node': '>=10'
+      pino: '>=10'
+      pino-pretty: '>=13'
+      posthog-node: '>=5'
+    peerDependenciesMeta:
+      '@axiomhq/pino':
+        optional: true
+      '@sentry/node':
+        optional: true
+      pino:
+        optional: true
+      pino-pretty:
+        optional: true
+      posthog-node:
+        optional: true
+
+  '@theholocron/prettier-config@8.2.0':
+    resolution: {integrity: sha512-DFSYrmhsuXTHQh2O2FJ6swCjHKWGJFOaBLCqrEd7cDQLphnSYQjjDQVgGcLeQ16R+RXOSUFU4OnKdYKLWCCsIg==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       prettier: ^3
 
-  '@theholocron/registry-doc@1.8.0':
-    resolution: {integrity: sha512-ArmqPbp6GftI+u6qZnR4kYJKKE2jcg0aMRRqB/ekDMJ5CJoCHuqtcjN4Fop/atjz21b98UA/dCvSbY5Vyju5Qg==}
+  '@theholocron/registry-doc@1.12.0':
+    resolution: {integrity: sha512-fQiuQpM8f95D+qHQWdEnU5VlwHqStcZnV89+NhCj0FS8sfftJYe+2ZfHkjl+EMVkUqolqb56RGYBRfCDz7je6g==}
     engines: {node: '>=22.0.0'}
 
-  '@theholocron/semantic-release-config@7.32.2':
-    resolution: {integrity: sha512-sY12KRYEpVR0cJAzlkAxNzdqM4B9fSL18jbeqIwK+OM9a9Z+M7j7+CUuKk4H2S2o1LZ5GZmbNNw0fd4ut8ZECQ==}
+  '@theholocron/semantic-release-config@8.2.0':
+    resolution: {integrity: sha512-PfD0zWPLZQXc4jy+/Cg9+UXrx1JidUd/LKnyCdf0aWoiRjxz3HYwrttLyslwlKQhmllLTjQnBuhU3mKLgNI9cw==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@semantic-release/changelog': ^6
@@ -2622,20 +2674,20 @@ packages:
     resolution: {integrity: sha512-jjnezEdoMUraGe4vmffm51KHTefXFNaHr2XNzweQSGjuzpj+F+iaBu741zXpZDtG5VCsyo5gF/sUIhEtUcw5pg==}
     engines: {node: '>=22', pnpm: '>=10'}
 
-  '@theholocron/tsconfig@7.19.1':
-    resolution: {integrity: sha512-8nSd3UOsmpV3MdHw4zDbBkj4QbF70LCO/vj1MIDFuRv/K7PqA+tGAuTB4YGjodWLwdQBC6wjRMQo0lK9zI92sg==}
+  '@theholocron/tsconfig@8.2.0':
+    resolution: {integrity: sha512-tKehKxnslIRvfJhGkz246FkshBH/pb5LvONW1iG8bBIW/mDURcp7CGLz0/k/UFHFxdQ43C+DWy/SlEs76tz+nA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       typescript: ^5
 
-  '@theholocron/tsdown-config@7.19.1':
-    resolution: {integrity: sha512-tHLJVM/YDyt0PWNQNMwbmOS9BJpI3ZdWdCmh1g/2UOhZMnYUuqs5YhkANnRSaoIVOkwKtL23BKd3k+6TpMlZ3g==}
+  '@theholocron/tsdown-config@8.2.0':
+    resolution: {integrity: sha512-7HlVqx9OxMB73G4YYasHQDaU5o8Y3x2M8PyzSQbb2fazfu+Ii1QTrSpY7tP5/JNfh+w1bkojOICZkXsSkUPV3Q==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       tsdown: ^0
 
-  '@theholocron/vitest-config@7.19.1':
-    resolution: {integrity: sha512-vP7EUuqFhFizQdRsbzWmJfFUPAzIFfB4kqE2Jj40P0uIfAY3jGyJWQ/7kJ84y6P3XEeBozrpeyGKMvjpSu5tAw==}
+  '@theholocron/vitest-config@8.2.0':
+    resolution: {integrity: sha512-OV5G4r/bHWyOjPhZbPg7MJUZzk54G4ZJTh2G6m1p88LBwE9nzd7B3QNj4C7c+oiA2V3wHiL/+paqVEu5QEgatA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@storybook/addon-vitest': ^9
@@ -3231,6 +3283,10 @@ packages:
       '@astrojs/markdown-remark':
         optional: true
 
+  atomic-sleep@1.0.0:
+    resolution: {integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==}
+    engines: {node: '>=8.0.0'}
+
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
     engines: {node: '>= 0.4'}
@@ -3453,6 +3509,9 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  colorette@2.0.20:
+    resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
+
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
 
@@ -3609,6 +3668,9 @@ packages:
   d@1.0.2:
     resolution: {integrity: sha512-MOqHvMWF9/9MX6nza0KgvFH4HpMU0EF5uUDXqX/BtxtU8NfB0QzRtJ8Oe/6SuS4kbhyzVJwjd97EA4PKrzJ8bw==}
     engines: {node: '>=0.12'}
+
+  dateformat@4.6.3:
+    resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -4004,6 +4066,9 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
+  fast-copy@4.1.1:
+    resolution: {integrity: sha512-A4QTJmuiztpGtr6AMeJts9R4hbj2ZBUwtOaKrG6rw2y7t6+IaJKjz5M3XDs8BUznxDH43FVc6A0y/gWlMl4UtA==}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -4012,6 +4077,9 @@ packages:
 
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
+
+  fast-safe-stringify@2.1.1:
+    resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
 
   fast-string-truncated-width@3.0.3:
     resolution: {integrity: sha512-0jjjIEL6+0jag3l2XWWizO64/aZVtpiGE3t0Zgqxv0DPuxiMjvB3M24fCyhZUO4KomJQPj3LTSUnDP3GpdwC0g==}
@@ -4039,6 +4107,9 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fetch-retry@6.0.0:
+    resolution: {integrity: sha512-BUFj1aMubgib37I3v4q78fYo63Po7t4HUPTpQ6/QE6yK6cIQrP+W43FYToeTEyg5m2Y7eFUtijUuAv/PDlWuag==}
 
   figures@2.0.0:
     resolution: {integrity: sha512-Oa2M9atig69ZkfwiApY8F2Yy+tzMbazyvqv21R0NsSC8floSOC09BbT1ITWAdoMGQvJ/aZnR1KMwdx9tvHnTNA==}
@@ -4353,6 +4424,9 @@ packages:
   hastscript@9.0.1:
     resolution: {integrity: sha512-g7df9rMFX/SPi34tyGCyUBREQoKkapwdY/T04Qn9TDWfHhAYt4/I0gMVirzK5wEzeUqIjEB+LXC/ypb7Aqno5w==}
 
+  help-me@5.0.0:
+    resolution: {integrity: sha512-7xgomUX6ADmcYzFik0HzAxh/73YlKR9bmFzf51CZwR+b6YtzU2m0u49hQCqV6SvlqIqsaxovfwdvbnsw3b/zpg==}
+
   highlight.js@10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
 
@@ -4661,6 +4735,10 @@ packages:
   jiti@2.7.0:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
+
+  joycon@3.1.1:
+    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
+    engines: {node: '>=10'}
 
   js-tokens@10.0.0:
     resolution: {integrity: sha512-lM/UBzQmfJRo9ABXbPWemivdCW8V2G8FHaHdypQaIy523snUjog0W71ayWXTjiR+ixeMyVHN2XcpnTd/liPg/Q==}
@@ -5575,6 +5653,10 @@ packages:
   ohash@2.0.12:
     resolution: {integrity: sha512-65S/5gk9YSsaRjcyf7Nfa6h/d3E8/1gslpXfI4W7Dxn/oap8IKRuNT5VXkLQ1YFKIEg4apRY4Pj6aiwFzrDdmw==}
 
+  on-exit-leak-free@2.1.2:
+    resolution: {integrity: sha512-0eJJY6hXLGf1udHwfNftBqH+g73EU4B504nZeKpz1sYRKafAghwxEJunB2O7rDZkL4PGfsMVnTXZ2EjibbqcsA==}
+    engines: {node: '>=14.0.0'}
+
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
 
@@ -5799,6 +5881,20 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
 
+  pino-abstract-transport@3.0.0:
+    resolution: {integrity: sha512-wlfUczU+n7Hy/Ha5j9a/gZNy7We5+cXp8YL+X+PG8S0KXxw7n/JXA3c46Y0zQznIJ83URJiwy7Lh56WLokNuxg==}
+
+  pino-pretty@13.1.3:
+    resolution: {integrity: sha512-ttXRkkOz6WWC95KeY9+xxWL6AtImwbyMHrL1mSwqwW9u+vLp/WIElvHvCSDg0xO/Dzrggz1zv3rN5ovTRVowKg==}
+    hasBin: true
+
+  pino-std-serializers@7.1.0:
+    resolution: {integrity: sha512-BndPH67/JxGExRgiX1dX0w1FvZck5Wa4aal9198SrRhZjH3GxKQUKIBnYJTdj2HDN3UQAS06HlfcSbQj2OHmaw==}
+
+  pino@10.3.1:
+    resolution: {integrity: sha512-r34yH/GlQpKZbU1BvFFqOjhISRo1MNx1tWYsYvmj6KIRHSPMT2+yHOEb1SG6NMvRoHRF0a07kCOox/9yakl1vg==}
+    hasBin: true
+
   pkg-conf@2.1.0:
     resolution: {integrity: sha512-C+VUP+8jis7EsQZIhDYmS5qlNtjv2yP4SNtjXK9AP1ZcTRlnSfuumaTnRfYZnYgUUYVIKqL0fRvmUGDV2fmp6g==}
     engines: {node: '>=4'}
@@ -5820,6 +5916,15 @@ packages:
   postcss@8.5.28:
     resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
+
+  posthog-node@5.51.8:
+    resolution: {integrity: sha512-TCqgAYbACwb/D3VI2S861ugD+FavvowQfak8eMwS/wATS+g0Wj+YpsABrBEKi+ZP3Y5SJDcoc7bIH49rlGo1Ww==}
+    engines: {node: ^20.20.0 || >=22.22.0}
+    peerDependencies:
+      rxjs: ^7.0.0
+    peerDependenciesMeta:
+      rxjs:
+        optional: true
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -5853,6 +5958,9 @@ packages:
   process-nextick-args@1.0.7:
     resolution: {integrity: sha512-yN0WQmuCX63LP/TMvAg31nvT6m4vDqJEiiv2CAZqWOGNWutc9DfDk1NPYYmKUFmaVM2UwDowH4u5AHWYP/jxKw==}
 
+  process-warning@5.1.0:
+    resolution: {integrity: sha512-jQSaVHsPgtyw60e1rQ/A+/ArPEj/S8pS/vFnyGa/gYFXrKk/6RuDkoqVDQ5NI5MmS01698ltlAk0NoDBNLujRw==}
+
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
 
@@ -5877,6 +5985,9 @@ packages:
   pump@1.0.3:
     resolution: {integrity: sha512-8k0JupWme55+9tCVE+FS5ULT3K6AbgqrGa58lTT49RpyfwwcGedHqaC5LlQNdEAumn/wFsu6aPwkuPMioy8kqw==}
 
+  pump@3.0.4:
+    resolution: {integrity: sha512-VS7sjc6KR7e1ukRFhQSY5LM2uBWAUPiOPa/A3mkKmiMwSmRFUITt0xuj+/lesgnCv+dPIEYlkzrcyXgquIHMcA==}
+
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -5887,6 +5998,9 @@ packages:
 
   quansync@1.0.0:
     resolution: {integrity: sha512-5xZacEEufv3HSTPQuchrvV6soaiACMFnq1H8wkVioctoH3TRha9Sz66lOxRwPK/qZj7HPiSveih9yAyh98gvqA==}
+
+  quick-format-unescaped@4.0.4:
+    resolution: {integrity: sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==}
 
   quick-lru@5.1.1:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
@@ -5970,6 +6084,13 @@ packages:
   readdirp@5.1.1:
     resolution: {integrity: sha512-Kko+Y5XQ6fM+Ce3dq3m9YGxnacYZYl9cA1wZjaF3Vbry2L3i1qVg8+CAgNPsXRArPMUMCaOR7oa9Nqntc43JKA==}
     engines: {node: '>= 20.19.0'}
+
+  real-require@0.2.0:
+    resolution: {integrity: sha512-57frrGM/OCTLqLOAh0mhVA9VBMHd+9U7Zb2THMGdBUoZVOtGbJzjxsYGDJ3A9AYYCP4hn6y1TVbaOfzWtm5GFg==}
+    engines: {node: '>= 12.13.0'}
+
+  real-require@1.0.0:
+    resolution: {integrity: sha512-P4nbQYQfePJxRSmY+v/KINxVucm4NF3p3s7pJveMTtom52FR4YGltUQLB8idDXwDDWW+eYrWDFbuzUnjoWHF7g==}
 
   recma-build-jsx@1.0.0:
     resolution: {integrity: sha512-8GtdyqaBcDfva+GUKDr3nev3VpKAhup1+RvkMvUxURHpW7QyIvk9F5wz7Vzo06CEMSilw6uArgRqhpiUcWp8ew==}
@@ -6178,6 +6299,10 @@ packages:
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
 
+  safe-stable-stringify@2.5.0:
+    resolution: {integrity: sha512-b3rppTKm9T+PsVCBEOUR46GWI7fdOs00VKZ1+9c1EWDaDMvjQc6tUwuFyIprgGgTcWoVHSKrU8H31ZHA2e0RHA==}
+    engines: {node: '>=10'}
+
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
@@ -6194,6 +6319,9 @@ packages:
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
+
+  secure-json-parse@4.1.0:
+    resolution: {integrity: sha512-l4KnYfEyqYJxDwlNVyRfO2E4NTHfMKAWdUuA8J0yve2Dz/E/PdBepY03RvyJpssIpRFwJoCD55wA+mEDs6ByWA==}
 
   semantic-release@25.0.9:
     resolution: {integrity: sha512-bxve7csK0/Txr++CkfrmV+X1r4jqiSOw2WsSad9E2S68R+ZfLBwDn8IceM8WfiOmKQIHgsQc1cNA8Dzg7U75pg==}
@@ -6272,6 +6400,9 @@ packages:
     resolution: {integrity: sha512-kCZr2V3ch9i00x8zXRhjUNVcjG9ijES5dDudkXvUVCT5QlJNQWElSJdZqyPemffHoLNUYwOcou0Fy+ojN0uHSQ==}
     engines: {node: '>= 18'}
 
+  sonic-boom@4.2.1:
+    resolution: {integrity: sha512-w6AxtubXa2wTXAUsZMMWERrsIRAdrK0Sc+FUytWvYAhBJLyuI4llrMIC1DtlNSdI99EI86KZum2MMq3EAZlF9Q==}
+
   sort-object-keys@2.1.0:
     resolution: {integrity: sha512-SOiEnthkJKPv2L6ec6HMwhUcN0/lppkeYuN1x63PbyPRrgSPIuBJCiYxYyvWRTtjMlOi14vQUCGUJqS6PLVm8g==}
 
@@ -6318,6 +6449,10 @@ packages:
 
   split2@1.0.0:
     resolution: {integrity: sha512-NKywug4u4pX/AZBB1FCPzZ6/7O+Xhz1qMVbzTvvKvikjO99oPN87SkK08mEY9P63/5lWjK+wgOOgApnTg5r6qg==}
+
+  split2@4.2.0:
+    resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
+    engines: {node: '>= 10.x'}
 
   split@0.2.10:
     resolution: {integrity: sha512-e0pKq+UUH2Xq/sXbYpZBZc3BawsfDZ7dgv+JtRTUPNcvF5CMR4Y9cvJqkMY0MoxWzTHvZuz1beg6pNEKlszPiQ==}
@@ -6471,6 +6606,10 @@ packages:
 
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
+
+  thread-stream@4.2.0:
+    resolution: {integrity: sha512-e2zZ96wSChazBsbENf/Pcm/4swHt2cEKQ92rhUjkL9GCKiTDJIaTBenjE/m9DXi0QBmTMDkFDdOomUy20A1tDQ==}
+    engines: {node: '>=20'}
 
   through2@0.4.2:
     resolution: {integrity: sha512-45Llu+EwHKtAZYTPPVn3XZHBgakWMN3rokhEv5hu596XP+cNgplMg+Gj+1nmAvj+L0K7+N49zBKx5rah5u0QIQ==}
@@ -7705,6 +7844,15 @@ snapshots:
   '@astrojs/yaml2ts@0.2.4':
     dependencies:
       yaml: 2.9.0
+
+  '@axiomhq/js@2.0.0':
+    dependencies:
+      fetch-retry: 6.0.0
+
+  '@axiomhq/pino@2.0.0':
+    dependencies:
+      '@axiomhq/js': 2.0.0
+      pino-abstract-transport: 3.0.0
 
   '@babel/code-frame@7.29.7':
     dependencies:
@@ -9032,6 +9180,8 @@ snapshots:
   '@pagefind/windows-x64@1.5.2':
     optional: true
 
+  '@pinojs/redact@0.4.0': {}
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -9046,6 +9196,12 @@ snapshots:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+
+  '@posthog/core@1.52.2':
+    dependencies:
+      '@posthog/types': 1.410.1
+
+  '@posthog/types@1.410.1': {}
 
   '@quansync/fs@1.0.0':
     dependencies:
@@ -9444,7 +9600,7 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@theholocron/astro-config@7.32.2(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.33.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)':
+  '@theholocron/astro-config@8.2.0(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.33.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)':
     dependencies:
       '@astrojs/react': 5.0.7(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(jiti@2.7.0)(lightningcss@1.33.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0)
       astro: 7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
@@ -9466,18 +9622,29 @@ snapshots:
       - tsx
       - yaml
 
-  '@theholocron/cli@3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)':
+  '@theholocron/astromech@4.15.0':
     dependencies:
+      '@theholocron/datapad': 4.15.0
+
+  '@theholocron/cli@4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)':
+    dependencies:
+      '@axiomhq/pino': 2.0.0
       '@inquirer/prompts': 8.7.1(@types/node@26.3.0)
       '@napi-rs/keyring': 1.3.0
       '@sentry/node': 10.73.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))
+      '@theholocron/astromech': 4.15.0
       '@theholocron/components-doc': 1.8.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@theholocron/datapad': 4.15.0
+      '@theholocron/env-utils': 1.7.1(dotenv@16.6.1)
       '@theholocron/github-client': 1.14.2(vitest@4.1.10)
       '@theholocron/http-client': 1.14.2(vitest@4.1.10)
-      '@theholocron/registry-doc': 1.8.0
+      '@theholocron/observability': 0.2.0(@axiomhq/pino@2.0.0)(@sentry/node@10.73.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1)))(pino-pretty@13.1.3)(pino@10.3.1)(posthog-node@5.51.8)
+      '@theholocron/registry-doc': 1.12.0
       chalk: 6.0.0
       ora: 9.4.1
-      tsx: 4.23.12
+      pino: 10.3.1
+      pino-pretty: 13.1.3
+      posthog-node: 5.51.8
       yargs: 18.1.0
     transitivePeerDependencies:
       - '@astrojs/react'
@@ -9486,12 +9653,14 @@ snapshots:
       - '@opentelemetry/exporter-trace-otlp-http'
       - '@types/node'
       - astro
+      - dotenv
       - react
       - react-dom
+      - rxjs
       - supports-color
       - vitest
 
-  '@theholocron/commitlint-config@7.32.2(@commitlint/cli@21.2.2(@types/node@26.3.0)(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.2)':
+  '@theholocron/commitlint-config@8.2.0(@commitlint/cli@21.2.2(@types/node@26.3.0)(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.2)':
     dependencies:
       '@commitlint/cli': 21.2.2(@types/node@26.3.0)(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.2)(typescript@5.9.3)
       '@commitlint/config-conventional': 21.2.2
@@ -9510,13 +9679,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@theholocron/datapad@4.15.0':
+    dependencies:
+      tsx: 4.23.12
+
   '@theholocron/docs-theme@1.9.3(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))':
     dependencies:
       '@astrojs/starlight': 0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3)
       astro: 7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0)
       gray-matter: 4.0.3
 
-  '@theholocron/eslint-config@7.24.1(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))':
+  '@theholocron/env-utils@1.7.1(dotenv@16.6.1)':
+    dependencies:
+      dotenv: 16.6.1
+
+  '@theholocron/eslint-config@8.2.0(@eslint/js@10.0.1(eslint@10.9.1(jiti@2.7.0)))(eslint-plugin-n@18.3.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.9.1(jiti@2.7.0)))(eslint@10.9.1(jiti@2.7.0))(globals@17.11.0)(typescript-eslint@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@5.9.3))':
     dependencies:
       '@eslint/compat': 2.1.0(eslint@10.9.1(jiti@2.7.0))
       '@eslint/js': 10.0.1(eslint@10.9.1(jiti@2.7.0))
@@ -9534,13 +9711,13 @@ snapshots:
     transitivePeerDependencies:
       - vitest
 
-  '@theholocron/holocron-config@7.32.2(@theholocron/cli@3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))':
+  '@theholocron/holocron-config@8.2.0(@theholocron/cli@4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))':
     dependencies:
-      '@theholocron/cli': 3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
+      '@theholocron/cli': 4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
 
-  '@theholocron/holocron-plugin-github@3.47.0(@theholocron/cli@3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))(@theholocron/github-client@1.14.2(vitest@4.1.10))':
+  '@theholocron/holocron-plugin-github@4.15.0(@theholocron/cli@4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10))(@theholocron/github-client@1.14.2(vitest@4.1.10))':
     dependencies:
-      '@theholocron/cli': 3.47.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
+      '@theholocron/cli': 4.15.0(@astrojs/react@6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(tsx@4.23.12)(yaml@2.9.0))(@astrojs/starlight@0.41.7(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(typescript@5.9.3))(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))(@types/node@26.3.0)(astro@7.2.3(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@26.3.0)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))(dotenv@16.6.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(vitest@4.1.10)
       '@theholocron/github-client': 1.14.2(vitest@4.1.10)
       libsodium-wrappers: 0.8.4
 
@@ -9548,20 +9725,28 @@ snapshots:
     optionalDependencies:
       vitest: 4.1.10(@opentelemetry/api@1.9.1)(@types/node@26.3.0)(@vitest/coverage-v8@4.1.10)(vite@7.3.6(@types/node@26.3.0)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.12)(yaml@2.9.0))
 
-  '@theholocron/lint-staged-config@7.32.2(husky@9.1.7)(lint-staged@17.4.1)(sort-package-json@4.0.0)':
+  '@theholocron/lint-staged-config@8.2.0(husky@9.1.7)(lint-staged@17.4.1)(sort-package-json@4.0.0)':
     dependencies:
       husky: 9.1.7
       lint-staged: 17.4.1
     optionalDependencies:
       sort-package-json: 4.0.0
 
-  '@theholocron/prettier-config@7.19.1(prettier@3.9.6)':
+  '@theholocron/observability@0.2.0(@axiomhq/pino@2.0.0)(@sentry/node@10.73.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1)))(pino-pretty@13.1.3)(pino@10.3.1)(posthog-node@5.51.8)':
+    optionalDependencies:
+      '@axiomhq/pino': 2.0.0
+      '@sentry/node': 10.73.0(@opentelemetry/core@2.11.0(@opentelemetry/api@1.9.1))
+      pino: 10.3.1
+      pino-pretty: 13.1.3
+      posthog-node: 5.51.8
+
+  '@theholocron/prettier-config@8.2.0(prettier@3.9.6)':
     dependencies:
       prettier: 3.9.6
 
-  '@theholocron/registry-doc@1.8.0': {}
+  '@theholocron/registry-doc@1.12.0': {}
 
-  '@theholocron/semantic-release-config@7.32.2(@semantic-release/changelog@7.0.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@11.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.4.0)(semantic-release@25.0.9(typescript@5.9.3))':
+  '@theholocron/semantic-release-config@8.2.0(@semantic-release/changelog@7.0.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@11.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.4.0)(semantic-release@25.0.9(typescript@5.9.3))':
     dependencies:
       '@semantic-release/changelog': 7.0.0(semantic-release@25.0.9(typescript@5.9.3))
       '@semantic-release/commit-analyzer': 13.0.1(semantic-release@25.0.9(typescript@5.9.3))
@@ -9575,15 +9760,15 @@ snapshots:
 
   '@theholocron/skills@1.3.2': {}
 
-  '@theholocron/tsconfig@7.19.1(typescript@5.9.3)':
+  '@theholocron/tsconfig@8.2.0(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 
-  '@theholocron/tsdown-config@7.19.1(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))':
+  '@theholocron/tsdown-config@8.2.0(tsdown@0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3))':
     dependencies:
       tsdown: 0.22.14(@volar/typescript@2.4.28)(oxc-resolver@11.24.2)(tsx@4.23.12)(typescript@5.9.3)
 
-  '@theholocron/vitest-config@7.19.1(@vitest/coverage-v8@4.1.10)(vitest@4.1.10)':
+  '@theholocron/vitest-config@8.2.0(@vitest/coverage-v8@4.1.10)(vitest@4.1.10)':
     dependencies:
       vitest: 4.1.10(@opentelemetry/api@1.9.1)(@types/node@26.3.0)(@vitest/coverage-v8@4.1.10)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
     optionalDependencies:
@@ -10273,6 +10458,8 @@ snapshots:
       - uploadthing
       - yaml
 
+  atomic-sleep@1.0.0: {}
+
   axobject-query@4.1.0: {}
 
   bail@2.0.2: {}
@@ -10477,6 +10664,8 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  colorette@2.0.20: {}
+
   comma-separated-tokens@2.0.3: {}
 
   commander@11.1.0: {}
@@ -10628,6 +10817,8 @@ snapshots:
     dependencies:
       es5-ext: 0.10.64
       type: 2.7.3
+
+  dateformat@4.6.3: {}
 
   debug@4.4.3:
     dependencies:
@@ -11086,11 +11277,15 @@ snapshots:
 
   extend@3.0.2: {}
 
+  fast-copy@4.1.1: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-json-stable-stringify@2.1.0: {}
 
   fast-levenshtein@2.0.6: {}
+
+  fast-safe-stringify@2.1.1: {}
 
   fast-string-truncated-width@3.0.3: {}
 
@@ -11115,6 +11310,8 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
+
+  fetch-retry@6.0.0: {}
 
   figures@2.0.0:
     dependencies:
@@ -11608,6 +11805,8 @@ snapshots:
       property-information: 7.2.0
       space-separated-tokens: 2.0.2
 
+  help-me@5.0.0: {}
+
   highlight.js@10.7.3: {}
 
   hook-std@4.0.0: {}
@@ -11846,6 +12045,8 @@ snapshots:
   jiti@2.6.1: {}
 
   jiti@2.7.0: {}
+
+  joycon@3.1.1: {}
 
   js-tokens@10.0.0: {}
 
@@ -13201,6 +13402,8 @@ snapshots:
 
   ohash@2.0.12: {}
 
+  on-exit-leak-free@2.1.2: {}
+
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
@@ -13477,6 +13680,42 @@ snapshots:
 
   pify@3.0.0: {}
 
+  pino-abstract-transport@3.0.0:
+    dependencies:
+      split2: 4.2.0
+
+  pino-pretty@13.1.3:
+    dependencies:
+      colorette: 2.0.20
+      dateformat: 4.6.3
+      fast-copy: 4.1.1
+      fast-safe-stringify: 2.1.1
+      help-me: 5.0.0
+      joycon: 3.1.1
+      minimist: 1.2.8
+      on-exit-leak-free: 2.1.2
+      pino-abstract-transport: 3.0.0
+      pump: 3.0.4
+      secure-json-parse: 4.1.0
+      sonic-boom: 4.2.1
+      strip-json-comments: 5.0.3
+
+  pino-std-serializers@7.1.0: {}
+
+  pino@10.3.1:
+    dependencies:
+      '@pinojs/redact': 0.4.0
+      atomic-sleep: 1.0.0
+      on-exit-leak-free: 2.1.2
+      pino-abstract-transport: 3.0.0
+      pino-std-serializers: 7.1.0
+      process-warning: 5.1.0
+      quick-format-unescaped: 4.0.4
+      real-require: 0.2.0
+      safe-stable-stringify: 2.5.0
+      sonic-boom: 4.2.1
+      thread-stream: 4.2.0
+
   pkg-conf@2.1.0:
     dependencies:
       find-up: 2.1.0
@@ -13500,6 +13739,10 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  posthog-node@5.51.8:
+    dependencies:
+      '@posthog/core': 1.52.2
+
   prelude-ls@1.2.1: {}
 
   prettier@3.9.6: {}
@@ -13517,6 +13760,8 @@ snapshots:
   process-ancestry@0.1.0: {}
 
   process-nextick-args@1.0.7: {}
+
+  process-warning@5.1.0: {}
 
   property-information@6.5.0: {}
 
@@ -13537,6 +13782,11 @@ snapshots:
       end-of-stream: 1.4.5
       once: 1.4.0
 
+  pump@3.0.4:
+    dependencies:
+      end-of-stream: 1.4.5
+      once: 1.4.0
+
   punycode@2.3.1: {}
 
   pupa@3.3.0:
@@ -13544,6 +13794,8 @@ snapshots:
       escape-goat: 4.0.0
 
   quansync@1.0.0: {}
+
+  quick-format-unescaped@4.0.4: {}
 
   quick-lru@5.1.1: {}
 
@@ -13646,6 +13898,10 @@ snapshots:
   readdirp@4.1.2: {}
 
   readdirp@5.1.1: {}
+
+  real-require@0.2.0: {}
+
+  real-require@1.0.0: {}
 
   recma-build-jsx@1.0.0:
     dependencies:
@@ -14051,6 +14307,8 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
+  safe-stable-stringify@2.5.0: {}
+
   safer-buffer@2.1.2: {}
 
   satteri@0.9.5:
@@ -14078,6 +14336,8 @@ snapshots:
     dependencies:
       extend-shallow: 2.0.1
       kind-of: 6.0.3
+
+  secure-json-parse@4.1.0: {}
 
   semantic-release@25.0.9(typescript@5.9.3):
     dependencies:
@@ -14204,6 +14464,10 @@ snapshots:
 
   smol-toml@1.8.0: {}
 
+  sonic-boom@4.2.1:
+    dependencies:
+      atomic-sleep: 1.0.0
+
   sort-object-keys@2.1.0: {}
 
   sort-package-json@4.0.0:
@@ -14257,6 +14521,8 @@ snapshots:
   split2@1.0.0:
     dependencies:
       through2: 2.0.0
+
+  split2@4.2.0: {}
 
   split@0.2.10:
     dependencies:
@@ -14409,6 +14675,10 @@ snapshots:
   thenify@3.3.1:
     dependencies:
       any-promise: 1.3.0
+
+  thread-stream@4.2.0:
+    dependencies:
+      real-require: 1.0.0
 
   through2@0.4.2:
     dependencies:
