@@ -1,3 +1,13 @@
+## [1.13.0](https://github.com/theholocron/docs/compare/v1.12.0...v1.13.0) (2026-09-10)
+
+### Features
+
+* **registry-doc:** ✨ add @theholocron/observability; drop @theholocron/logger ([#43](https://github.com/theholocron/docs/issues/43)) ([a18bf8f](https://github.com/theholocron/docs/commit/a18bf8f23ab961159801ec265e023fe245257870)), references [theholocron/holocron#633](https://github.com/theholocron/holocron/issues/633)
+
+### Chores
+
+* ⬆️ @theholocron/cli 3.x → 4.15 + configs 7.x → 8.2 ([#44](https://github.com/theholocron/docs/issues/44)) ([c3552fc](https://github.com/theholocron/docs/commit/c3552fcfd00de8ac3473d89bf363011f44475311)), references [#581](https://github.com/theholocron/docs/issues/581)
+
 ## [1.12.0](https://github.com/theholocron/docs/compare/v1.11.0...v1.12.0) (2026-09-08)
 
 ### Features
