@@ -1,3 +1,13 @@
+## [1.13.1](https://github.com/theholocron/docs/compare/v1.13.0...v1.13.1) (2026-09-11)
+
+### Bug Fixes
+
+* **hooks:** scope pre-commit GitLeaks scan to staged changes ([#46](https://github.com/theholocron/docs/issues/46)) ([c64a119](https://github.com/theholocron/docs/commit/c64a119833e028773a6d2a13f9e1ed7be7925b7b))
+
+### Chores
+
+* **deps:** bump astro in the security-patches group across 1 directory ([#42](https://github.com/theholocron/docs/issues/42)) ([fd68b75](https://github.com/theholocron/docs/commit/fd68b750ba86c302f0207967bcbaf1c9a4211028))
+
 ## [1.13.0](https://github.com/theholocron/docs/compare/v1.12.0...v1.13.0) (2026-09-10)
 
 ### Features
