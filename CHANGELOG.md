@@ -1,3 +1,9 @@
+## [1.13.3](https://github.com/theholocron/docs/compare/v1.13.2...v1.13.3) (2026-09-12)
+
+### Chores
+
+* **deps:** bump the all-dependencies group with 4 updates ([#45](https://github.com/theholocron/docs/issues/45)) ([e9a45e6](https://github.com/theholocron/docs/commit/e9a45e62e6fa661ca2bfb177ce45ce351e873dfd))
+
 ## [1.13.2](https://github.com/theholocron/docs/compare/v1.13.1...v1.13.2) (2026-09-12)
 
 ### Bug Fixes
