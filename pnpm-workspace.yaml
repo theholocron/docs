@@ -12,23 +12,23 @@ catalog:
   "@semantic-release/exec": ^7.1.0
   "@semantic-release/git": ^11.0.1
   "@semantic-release/github": ^12.0.9
-  "@theholocron/docs-theme": ^1.8.0
+  "@theholocron/docs-theme": ^1.10.0
   "@vitest/coverage-v8": ^4.1.10
   astro: ^7.2.8
   conventional-changelog-conventionalcommits: ^10.4.0
-  eslint: ^10.9.1
+  eslint: ^10.10.0
   eslint-plugin-n: ^18.2.2
   eslint-plugin-simple-import-sort: ^14.0.0
   globals: ^17.11.0
   husky: ^9.1.7
   knip: ^6.34.0
-  lint-staged: ^17.4.1
+  lint-staged: ^17.5.0
   prettier: ^3.6.2
   semantic-release: ^25.0.8
   sort-package-json: ^4.0.0
   tsdown: ^0.22.14
   typescript: ^5.9.3
-  typescript-eslint: ^8.69.0
+  typescript-eslint: ^8.70.0
   vitest: ^4.1.10
 
 # Shared configs — release in lockstep; bump all entries together.
