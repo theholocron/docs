@@ -1,6 +1,6 @@
 {
   "name": "@theholocron/docs",
-  "version": "1.13.1",
+  "version": "1.13.2",
   "private": true,
   "description": "Documentation infrastructure.",
   "homepage": "https://docs.theholocron.dev/docs/",
