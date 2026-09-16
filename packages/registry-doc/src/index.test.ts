@@ -117,7 +117,7 @@ describe("getHolocron", () => {
 		expect(h["rollup-plugin-transform-template"]).toBeDefined();
 		expect(h["datapad"]).toBeDefined();
 		expect(h["astromech"]).toBeDefined();
-		expect(h["github-app"]).toBeDefined();
+		expect(h["sentinel"]).toBeDefined();
 	});
 });
 
@@ -132,7 +132,7 @@ describe("getTools", () => {
 		);
 		expect(getTools()["datapad"]?.package).toBe("@theholocron/datapad");
 		expect(getTools()["astromech"]?.package).toBe("@theholocron/astromech");
-		expect(getTools()["github-app"]?.package).toBe("@theholocron/github-app");
+		expect(getTools()["sentinel"]?.package).toBe("@theholocron/sentinel");
 	});
 
 	it("points githubUrl to the holocron repo", () => {
