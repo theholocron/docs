@@ -21,6 +21,7 @@ export const cli: LinksRegistry = {
 export const tools: LinksRegistry = {
 	astromech: makeHolocronEntry("astromech", "commands/run"),
 	datapad: makeHolocronEntry("datapad", "config"),
+	sentinel: makeHolocronEntry("sentinel", "sentinel"),
 	"rollup-plugin-transform-template": makeHolocronEntry(
 		"rollup-plugin-transform-template",
 		"rollup-plugin-transform-template"

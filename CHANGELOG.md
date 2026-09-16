@@ -2,13 +2,13 @@
 
 ### Chores
 
-* **deps:** bump the all-dependencies group with 4 updates ([#45](https://github.com/theholocron/docs/issues/45)) ([e9a45e6](https://github.com/theholocron/docs/commit/e9a45e62e6fa661ca2bfb177ce45ce351e873dfd))
+- **deps:** bump the all-dependencies group with 4 updates ([#45](https://github.com/theholocron/docs/issues/45)) ([e9a45e6](https://github.com/theholocron/docs/commit/e9a45e62e6fa661ca2bfb177ce45ce351e873dfd))
 
 ## [1.13.2](https://github.com/theholocron/docs/compare/v1.13.1...v1.13.2) (2026-09-12)
 
 ### Bug Fixes
 
-* 🐛 rename yamllint.config.yml to .yamllint.yml for auto-detection ([#47](https://github.com/theholocron/docs/issues/47)) ([4e56f89](https://github.com/theholocron/docs/commit/4e56f8941806ba6d59cc803669998399ef9c21f9))
+- 🐛 rename yamllint.config.yml to .yamllint.yml for auto-detection ([#47](https://github.com/theholocron/docs/issues/47)) ([4e56f89](https://github.com/theholocron/docs/commit/4e56f8941806ba6d59cc803669998399ef9c21f9))
 
 ## [1.13.1](https://github.com/theholocron/docs/compare/v1.13.0...v1.13.1) (2026-09-11)
 
