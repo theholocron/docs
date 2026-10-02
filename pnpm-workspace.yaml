@@ -29,7 +29,7 @@ catalog:
   tsdown: ^0.22.14
   typescript: ^5.9.3
   typescript-eslint: ^8.70.0
-  vitest: ^4.1.10
+  vitest: ^5.0.3
 
 # Shared configs — release in lockstep; bump all entries together.
 catalogs:
