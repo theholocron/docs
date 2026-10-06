@@ -4,47 +4,47 @@ packages:
 
 # Shared dep versions for this repo.
 catalog:
-  "@astrojs/starlight": ^0.41.5
-  "@commitlint/cli": ^21.2.2
+  "@astrojs/starlight": ^0.42.5
+  "@commitlint/cli": ^21.2.3
   "@eslint/js": ^10.0.0
-  "@types/node": ^26.3.0
+  "@types/node": ^26.6.4
   "@semantic-release/changelog": ^7.0.0
   "@semantic-release/exec": ^7.1.0
   "@semantic-release/git": ^11.0.1
-  "@semantic-release/github": ^12.0.9
-  "@theholocron/docs-theme": ^1.10.0
+  "@semantic-release/github": ^12.0.10
+  "@theholocron/docs-theme": ^1.10.3
   "@vitest/coverage-v8": ^4.1.10
-  astro: ^7.2.8
+  astro: ^7.3.5
   conventional-changelog-conventionalcommits: ^10.4.0
-  eslint: ^10.10.0
-  eslint-plugin-n: ^18.2.2
+  eslint: ^10.12.0
+  eslint-plugin-n: ^18.4.1
   eslint-plugin-simple-import-sort: ^14.0.0
-  globals: ^17.11.0
+  globals: ^17.13.0
   husky: ^9.1.7
-  knip: ^6.34.0
-  lint-staged: ^17.5.0
-  prettier: ^3.6.2
+  knip: ^6.39.0
+  lint-staged: ^17.6.0
+  prettier: ^3.9.9
   semantic-release: ^25.0.8
   sort-package-json: ^4.0.0
-  tsdown: ^0.22.14
+  tsdown: ^0.23.0
   typescript: ^5.9.3
-  typescript-eslint: ^8.70.0
+  typescript-eslint: ^8.71.0
   vitest: ^4.1.10
 
 # Shared configs — release in lockstep; bump all entries together.
 catalogs:
   configs:
-    "@theholocron/astro-config": ^8.2.0
-    "@theholocron/commitlint-config": ^8.2.0
-    "@theholocron/eslint-config": ^8.2.0
-    "@theholocron/holocron-config": ^8.2.0
-    "@theholocron/lint-staged-config": ^8.2.0
-    "@theholocron/prettier-config": ^8.2.0
-    "@theholocron/semantic-release-config": ^8.2.0
-    "@theholocron/tsconfig": ^8.2.0
-    "@theholocron/tsdown-config": ^8.2.0
-    "@theholocron/vitest-config": ^8.2.0
+    "@theholocron/astro-config": ^8.7.0
+    "@theholocron/commitlint-config": ^8.7.0
+    "@theholocron/eslint-config": ^8.7.0
+    "@theholocron/holocron-config": ^8.7.0
+    "@theholocron/lint-staged-config": ^8.7.0
+    "@theholocron/prettier-config": ^8.7.0
+    "@theholocron/semantic-release-config": ^8.7.0
+    "@theholocron/tsconfig": ^8.7.0
+    "@theholocron/tsdown-config": ^8.7.0
+    "@theholocron/vitest-config": ^8.7.0
 
   holocron:
-    "@theholocron/cli": ^4.15.0
-    "@theholocron/holocron-plugin-github": ^4.15.0
+    "@theholocron/cli": ^4.19.0
+    "@theholocron/holocron-plugin-github": ^4.19.0
