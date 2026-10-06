@@ -1,3 +1,9 @@
+## [1.15.0](https://github.com/theholocron/docs/compare/v1.14.0...v1.15.0) (2026-10-06)
+
+### Features
+
+* **registry-doc:** register @theholocron/holocron-plugin-netlify ([#56](https://github.com/theholocron/docs/issues/56)) ([040e994](https://github.com/theholocron/docs/commit/040e994add31b4245d0004c467645537c10a532f)), references [theholocron/holocron#940](https://github.com/theholocron/holocron/issues/940) [theholocron/holocron#940](https://github.com/theholocron/holocron/issues/940)
+
 ## [1.14.0](https://github.com/theholocron/docs/compare/v1.13.3...v1.14.0) (2026-09-16)
 
 ### Features
