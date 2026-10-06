@@ -2,7 +2,7 @@
 
 ### Features
 
-* **registry-doc:** register @theholocron/sentinel ([#48](https://github.com/theholocron/docs/issues/48)) ([349e0c0](https://github.com/theholocron/docs/commit/349e0c00c85048258175a8b927558a1a7cebbe6b)), references [#679](https://github.com/theholocron/docs/issues/679) [#647](https://github.com/theholocron/docs/issues/647)
+- **registry-doc:** register @theholocron/sentinel ([#48](https://github.com/theholocron/docs/issues/48)) ([349e0c0](https://github.com/theholocron/docs/commit/349e0c00c85048258175a8b927558a1a7cebbe6b)), references [#679](https://github.com/theholocron/docs/issues/679) [#647](https://github.com/theholocron/docs/issues/647)
 
 ## [1.13.3](https://github.com/theholocron/docs/compare/v1.13.2...v1.13.3) (2026-09-12)
 

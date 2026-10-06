@@ -39,6 +39,7 @@ export const plugins: LinksRegistry = {
 	"holocron-plugin-github": makeHolocronEntry("holocron-plugin-github", "plugins/github"),
 	"holocron-plugin-infisical": makeHolocronEntry("holocron-plugin-infisical", "plugins/infisical"),
 	"holocron-plugin-neon": makeHolocronEntry("holocron-plugin-neon", "plugins/neon"),
+	"holocron-plugin-netlify": makeHolocronEntry("holocron-plugin-netlify", "plugins/netlify"),
 	"holocron-plugin-posthog": makeHolocronEntry("holocron-plugin-posthog", "plugins/posthog"),
 	"holocron-plugin-postman": makeHolocronEntry("holocron-plugin-postman", "plugins/postman"),
 	"holocron-plugin-sentry": makeHolocronEntry("holocron-plugin-sentry", "plugins/sentry"),
