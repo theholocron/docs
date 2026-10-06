@@ -1,3 +1,9 @@
+## [1.16.0](https://github.com/theholocron/docs/compare/v1.15.0...v1.16.0) (2026-10-06)
+
+### Features
+
+* **registry-doc:** register @theholocron/object-utils and @theholocron/fs-utils ([#57](https://github.com/theholocron/docs/issues/57)) ([4fb04f6](https://github.com/theholocron/docs/commit/4fb04f65d09ecbc8e09940e0f013728387dec7a5))
+
 ## [1.15.0](https://github.com/theholocron/docs/compare/v1.14.0...v1.15.0) (2026-10-06)
 
 ### Features
