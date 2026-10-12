@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/theholocron/docs/compare/v1.16.0...v1.17.0) (2026-10-12)
+
+### Features
+
+* **registry-doc:** register @theholocron/holocron-plugin-checkly ([#59](https://github.com/theholocron/docs/issues/59)) ([79155b6](https://github.com/theholocron/docs/commit/79155b6e933d6285c66dbfb15d93897e93327ee3)), references [theholocron/holocron#997](https://github.com/theholocron/holocron/issues/997)
+
 ## [1.16.0](https://github.com/theholocron/docs/compare/v1.15.0...v1.16.0) (2026-10-06)
 
 ### Features
