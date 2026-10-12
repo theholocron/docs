@@ -86,8 +86,8 @@ describe("getCli", () => {
 });
 
 describe("getPlugins", () => {
-	it("returns all 16 plugin entries", () => {
-		expect(Object.keys(getPlugins())).toHaveLength(16);
+	it("returns all 17 plugin entries", () => {
+		expect(Object.keys(getPlugins())).toHaveLength(17);
 	});
 
 	it("derives package name from scope and slug", () => {
@@ -106,8 +106,8 @@ describe("getPlugins", () => {
 });
 
 describe("getHolocron", () => {
-	it("merges cli, plugins, and tools into 21 entries", () => {
-		expect(Object.keys(getHolocron())).toHaveLength(21);
+	it("merges cli, plugins, and tools into 22 entries", () => {
+		expect(Object.keys(getHolocron())).toHaveLength(22);
 	});
 
 	it("contains cli, plugin, and tool entries", () => {
@@ -253,9 +253,9 @@ describe("getTemplates", () => {
 });
 
 describe("getRegistry", () => {
-	it("merges all registries into 72 entries", () => {
+	it("merges all registries into 73 entries", () => {
 		const reg = getRegistry();
-		expect(Object.keys(reg)).toHaveLength(72);
+		expect(Object.keys(reg)).toHaveLength(73);
 	});
 
 	it("contains entries from every registry", () => {
