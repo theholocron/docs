@@ -1,3 +1,9 @@
+## [1.18.0](https://github.com/theholocron/docs/compare/v1.17.0...v1.18.0) (2026-10-14)
+
+### Features
+
+* **registry-doc:** register git-utils and json-utils ([#61](https://github.com/theholocron/docs/issues/61)) ([83bae41](https://github.com/theholocron/docs/commit/83bae41d8174f5431a9bfc210b2b93237c81179f)), references [theholocron/utils#302](https://github.com/theholocron/utils/issues/302)
+
 ## [1.17.0](https://github.com/theholocron/docs/compare/v1.16.0...v1.17.0) (2026-10-12)
 
 ### Features
