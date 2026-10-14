@@ -19,6 +19,8 @@ export const utils: LinksRegistry = {
 	"date-time-utils": makeUtilEntry("date-time-utils", "date-time"),
 	"env-utils": makeUtilEntry("env-utils", "env"),
 	"fs-utils": makeUtilEntry("fs-utils", "fs"),
+	"git-utils": makeUtilEntry("git-utils", "git"),
+	"json-utils": makeUtilEntry("json-utils", "json"),
 	"location-utils": makeUtilEntry("location-utils", "location"),
 	"misc-utils": makeUtilEntry("misc-utils", "misc"),
 	"object-utils": makeUtilEntry("object-utils", "object"),
