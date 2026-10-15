@@ -24,6 +24,7 @@ export const utils: LinksRegistry = {
 	"location-utils": makeUtilEntry("location-utils", "location"),
 	"misc-utils": makeUtilEntry("misc-utils", "misc"),
 	"object-utils": makeUtilEntry("object-utils", "object"),
+	"pkg-utils": makeUtilEntry("pkg-utils", "pkg"),
 	"storage-utils": makeUtilEntry("storage-utils", "storage"),
 	"string-utils": makeUtilEntry("string-utils", "string"),
 	"uri-utils": makeUtilEntry("uri-utils", "uri"),
