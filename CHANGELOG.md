@@ -1,3 +1,9 @@
+## [1.19.0](https://github.com/theholocron/docs/compare/v1.18.0...v1.19.0) (2026-10-15)
+
+### Features
+
+* **registry-doc:** ✨ register pkg-utils ([#62](https://github.com/theholocron/docs/issues/62)) ([bd37644](https://github.com/theholocron/docs/commit/bd37644a7f65d62cc9ff57abac7778363f65698f))
+
 ## [1.18.0](https://github.com/theholocron/docs/compare/v1.17.0...v1.18.0) (2026-10-14)
 
 ### Features
