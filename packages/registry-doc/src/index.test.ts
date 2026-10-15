@@ -175,8 +175,8 @@ describe("getConfigs", () => {
 });
 
 describe("getUtils", () => {
-	it("returns all 12 util entries", () => {
-		expect(Object.keys(getUtils())).toHaveLength(12);
+	it("returns all 13 util entries", () => {
+		expect(Object.keys(getUtils())).toHaveLength(13);
 	});
 
 	it("derives package name from scope and slug", () => {
@@ -253,9 +253,9 @@ describe("getTemplates", () => {
 });
 
 describe("getRegistry", () => {
-	it("merges all registries into 75 entries", () => {
+	it("merges all registries into 76 entries", () => {
 		const reg = getRegistry();
-		expect(Object.keys(reg)).toHaveLength(75);
+		expect(Object.keys(reg)).toHaveLength(76);
 	});
 
 	it("contains entries from every registry", () => {
