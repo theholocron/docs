@@ -22,12 +22,12 @@ The package exports one getter per repo, plus a combined registry:
 | `getPlugins()`   | 13 Holocron plugins                          |
 | `getHolocron()`  | cli + plugins combined                       |
 | `getConfigs()`   | 16 shareable configs (`theholocron/configs`) |
-| `getUtils()`     | 8 utility packages (`theholocron/utils`)     |
+| `getUtils()`     | 13 utility packages (`theholocron/utils`)    |
 | `getThemes()`    | `@theholocron/docs-theme`                    |
 | `getDocs()`      | `@theholocron/registry-doc`                  |
 | `getSkills()`    | `@theholocron/skills`                        |
 | `getTemplates()` | 6 project templates                          |
-| `getRegistry()`  | All 62 entries merged                        |
+| `getRegistry()`  | All 76 entries merged                        |
 
 ## Usage
 

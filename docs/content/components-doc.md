@@ -77,7 +77,7 @@ import { getClients, getPlugins } from "@theholocron/registry-doc";
 
 ### `RelatedProjects`
 
-Picks a random cross-registry selection from all 62 org packages and renders a linked list, excluding the current page's slug. Refreshes on each build.
+Picks a random cross-registry selection from all 76 org packages and renders a linked list, excluding the current page's slug. Refreshes on each build.
 
 ```mdx
 import { RelatedProjects } from "@theholocron/components-doc";
